@@ -4,7 +4,7 @@
 [ext_resource path="res://player/player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12, 4 )
+extents = Vector2( 11, 4 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "jump"
@@ -46,7 +46,9 @@ tracks/2/keys = {
 "values": [ 100.0, 100.0, 50.0 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 position = Vector2( 240, 135 )
 script = ExtResource( 2 )
 current_speed = 50.0
@@ -59,8 +61,7 @@ position = Vector2( 0, -8 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0, -4 )
+position = Vector2( -1, -4 )
 shape = SubResource( 1 )
 
 [node name="JumpPlayer" type="AnimationPlayer" parent="."]
