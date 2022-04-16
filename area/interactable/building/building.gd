@@ -1,8 +1,8 @@
 extends "res://area/interactable/interactable.gd"
 
 
-export (PackedScene) var inside
+export (String, FILE) var inside
 
 
 func interact():
-	var _ret = get_tree().change_scene_to(inside)
+	var _ret = get_tree().change_scene(inside)

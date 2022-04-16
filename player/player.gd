@@ -4,6 +4,9 @@ export (float) var current_speed = 0.0
 
 
 func _physics_process(_delta: float) -> void:
+	if DialogueManager.is_open:
+		return
+	
 	var input := Vector2()
 	if Input.is_action_pressed("move_up"):
 		input += Vector2.UP

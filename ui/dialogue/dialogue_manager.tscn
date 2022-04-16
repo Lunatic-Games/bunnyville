@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/dialogue/dialogue_manager.gd" type="Script" id=1]
+[ext_resource path="res://ui/dialogue/small_dialogue.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/dialogue/portrait_dialogue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/dialogue/dialogue.tscn" type="PackedScene" id=4]
+
+[node name="DialogueManager" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="FullDialogue" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="PortraitDialogue" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="SmallDialogue" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[connection signal="finished" from="FullDialogue" to="." method="_on_dialogue_finished"]
+[connection signal="finished" from="PortraitDialogue" to="." method="_on_dialogue_finished"]
+[connection signal="finished" from="SmallDialogue" to="." method="_on_dialogue_finished"]
