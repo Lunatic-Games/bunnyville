@@ -19,6 +19,7 @@ func change_area(new_area: String, player_exit: String = "") -> void:
 
 	if player_exit:
 		current_area.place_player_at_exit(player_exit)
+	current_area.player.camera.make_current()  # Force camera update, otherwise it waits till unpause
 	
 	transition_player.play("fade_out")
 	yield(transition_player, "animation_finished")

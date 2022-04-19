@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 export (float) var current_speed = 0.0
 
+onready var camera = $Camera2D
+
 
 func _physics_process(_delta: float) -> void:
 	if DialogueManager.is_open:
