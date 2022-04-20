@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export (AreaList.AREAS) var to
+export (AreaManager.AREA) var to
 export (String) var exit_name
 
 

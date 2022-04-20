@@ -1,9 +1,14 @@
 extends Node
 
 
-const AREA_SCENES = {
-	AreaList.AREAS.TOWN: preload("res://area/areas/town.tscn"),
-	AreaList.AREAS.HOUSE_1: preload("res://area/areas/houses/house_1.tscn")
+enum AREA {
+	TOWN,
+	HOUSE_1
+}
+
+onready var AREA_SCENES = {
+	AREA.TOWN: load("res://area/areas/town.tscn"),
+	AREA.HOUSE_1: load("res://area/areas/houses/house_1.tscn")
 }
 
 

@@ -17,7 +17,6 @@ config/icon="res://icon.png"
 [autoload]
 
 DialogueManager="*res://managers/dialogue/dialogue_manager.tscn"
-AreaList="*res://area/area_list.gd"
 AreaManager="*res://managers/area_manager.gd"
 
 [display]
