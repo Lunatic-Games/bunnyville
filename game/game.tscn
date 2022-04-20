@@ -98,9 +98,9 @@ script = ExtResource( 2 )
 [node name="Town" parent="." instance=ExtResource( 1 )]
 script = null
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Overlay" type="CanvasLayer" parent="."]
 
-[node name="Transition" type="ColorRect" parent="CanvasLayer"]
+[node name="Transition" type="ColorRect" parent="Overlay"]
 material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -109,7 +109,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Transition"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Overlay/Transition"]
 pause_mode = 2
 anims/RESET = SubResource( 2 )
 anims/fade_in = SubResource( 3 )

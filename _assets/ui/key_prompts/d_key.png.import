@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sign.png-bdf39d48b22e6040e89b63a023ff2d2e.stex"
+path="res://.import/d_key.png-2515828ece5118bfd2860af15fceb24e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/structures/sign.png"
-dest_files=[ "res://.import/sign.png-bdf39d48b22e6040e89b63a023ff2d2e.stex" ]
+source_file="res://_assets/ui/key_prompts/d_key.png"
+dest_files=[ "res://.import/d_key.png-2515828ece5118bfd2860af15fceb24e.stex" ]
 
 [params]
 

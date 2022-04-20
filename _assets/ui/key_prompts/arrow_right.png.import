@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Q_Key_Light.png-ff2ce95f25b57d6aba229a57d6833a80.stex"
+path="res://.import/arrow_right.png-9fc5e121128555df997d73478e9ee41d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/prompts/Q_Key_Light.png"
-dest_files=[ "res://.import/Q_Key_Light.png-ff2ce95f25b57d6aba229a57d6833a80.stex" ]
+source_file="res://_assets/ui/key_prompts/arrow_right.png"
+dest_files=[ "res://.import/arrow_right.png-9fc5e121128555df997d73478e9ee41d.stex" ]
 
 [params]
 

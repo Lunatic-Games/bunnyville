@@ -1,7 +1,7 @@
 extends "res://area/interactable/interactable.gd"
 
 
-export (String, FILE) var inside
+export (AreaList.AREAS) var inside
 
 
 func interact():

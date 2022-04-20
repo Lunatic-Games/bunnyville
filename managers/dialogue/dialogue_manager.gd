@@ -5,6 +5,7 @@ enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL}
 
 var is_open = false
 
+
 func display_dialogue(type: int, pages: Array) -> void:
 	is_open = true
 	

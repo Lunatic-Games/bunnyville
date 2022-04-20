@@ -14,7 +14,7 @@ position = Vector2( 102, 148 )
 
 [node name="Building" parent="YSort" index="1" instance=ExtResource( 3 )]
 position = Vector2( 102, 131 )
-inside = "res://area/areas/houses/house_1.tscn"
+inside = 1
 
 [node name="Sign" parent="YSort" index="2" instance=ExtResource( 2 )]
 position = Vector2( 157, 140 )

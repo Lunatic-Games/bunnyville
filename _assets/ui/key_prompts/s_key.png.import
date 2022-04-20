@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/D_Key_Light.png-ef400accaefd542aa34a6b627cd1ea24.stex"
+path="res://.import/s_key.png-733e9c2914ae506a71989667b066f262.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/prompts/D_Key_Light.png"
-dest_files=[ "res://.import/D_Key_Light.png-ef400accaefd542aa34a6b627cd1ea24.stex" ]
+source_file="res://_assets/ui/key_prompts/s_key.png"
+dest_files=[ "res://.import/s_key.png-733e9c2914ae506a71989667b066f262.stex" ]
 
 [params]
 

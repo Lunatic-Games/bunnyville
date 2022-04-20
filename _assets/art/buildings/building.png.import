@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left_arrow.png-d1d61c38e57bbb18cf942d6faa3526f4.stex"
+path="res://.import/building.png-ef32052062f652f14ea6da89d3efad28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/arrows/left_arrow.png"
-dest_files=[ "res://.import/left_arrow.png-d1d61c38e57bbb18cf942d6faa3526f4.stex" ]
+source_file="res://_assets/art/buildings/building.png"
+dest_files=[ "res://.import/building.png-ef32052062f652f14ea6da89d3efad28.stex" ]
 
 [params]
 

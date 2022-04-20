@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Arrow_Down_Key_Light.png-aa4d8a2ee1b685bcc160172bf1265c86.stex"
+path="res://.import/e_key.png-758b9e4e5f673272c070f029b6668992.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/prompts/Arrow_Down_Key_Light.png"
-dest_files=[ "res://.import/Arrow_Down_Key_Light.png-aa4d8a2ee1b685bcc160172bf1265c86.stex" ]
+source_file="res://_assets/ui/key_prompts/e_key.png"
+dest_files=[ "res://.import/e_key.png-758b9e4e5f673272c070f029b6668992.stex" ]
 
 [params]
 

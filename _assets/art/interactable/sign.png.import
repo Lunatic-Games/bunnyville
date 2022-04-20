@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/up_arrow.png-2a762de014f9d94f7cdc15eaeb047acf.stex"
+path="res://.import/sign.png-e4172c35ac3a8c7d4bc2c7849552632a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/arrows/up_arrow.png"
-dest_files=[ "res://.import/up_arrow.png-2a762de014f9d94f7cdc15eaeb047acf.stex" ]
+source_file="res://_assets/art/interactable/sign.png"
+dest_files=[ "res://.import/sign.png-e4172c35ac3a8c7d4bc2c7849552632a.stex" ]
 
 [params]
 

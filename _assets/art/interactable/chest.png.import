@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/F_Key_Light.png-3f21a3db5974c47a09ec78cf1bc4b750.stex"
+path="res://.import/chest.png-148debe6b4b498265cb3e2eb46d7699e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/prompts/F_Key_Light.png"
-dest_files=[ "res://.import/F_Key_Light.png-3f21a3db5974c47a09ec78cf1bc4b750.stex" ]
+source_file="res://_assets/art/interactable/chest.png"
+dest_files=[ "res://.import/chest.png-148debe6b4b498265cb3e2eb46d7699e.stex" ]
 
 [params]
 

@@ -14,7 +14,7 @@ tile_data = PoolIntArray( 131083, 3, 0, 131092, 3, 0, 196619, 3, 0, 196620, 6, 0
 tile_data = PoolIntArray( 65548, 7, 0, 65549, 7, 1, 65550, 7, 1, 65551, 7, 1, 65552, 7, 1, 65553, 7, 1, 65554, 7, 1, 65555, 7, 2, 524303, 5, 0 )
 
 [node name="Passage" parent="Passages" index="0" instance=ExtResource( 3 )]
-to = "res://area/areas/town.tscn"
+position = Vector2( 256, 144 )
 exit_name = "House1"
 
 [node name="Player" parent="YSort" index="0"]

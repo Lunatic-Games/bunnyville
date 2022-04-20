@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Esc_Key_Light.png-6aaac4e20f53d661d4944a5ebdc07ca4.stex"
+path="res://.import/q_key.png-957f940107a7bba19c9c1536d0e52951.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/ui/prompts/Esc_Key_Light.png"
-dest_files=[ "res://.import/Esc_Key_Light.png-6aaac4e20f53d661d4944a5ebdc07ca4.stex" ]
+source_file="res://_assets/ui/key_prompts/q_key.png"
+dest_files=[ "res://.import/q_key.png-957f940107a7bba19c9c1536d0e52951.stex" ]
 
 [params]
 
