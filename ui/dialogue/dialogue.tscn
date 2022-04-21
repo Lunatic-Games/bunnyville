@@ -31,6 +31,7 @@ margin_bottom = 74.0
 custom_colors/font_color = Color( 0.231373, 0.0901961, 0.145098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Home of Mr. Rabbit"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

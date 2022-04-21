@@ -4,6 +4,7 @@ extends CanvasLayer
 enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL}
 
 var is_open = false
+var queued_dialogue: Array = []
 
 
 func display_dialogue(type: int, pages: Array) -> void:
@@ -24,5 +25,13 @@ func display_dialogue(type: int, pages: Array) -> void:
 			$PortraitDialogue.hide()
 
 
+func queue_dialogue(type: int, pages: Array) -> void:
+	queued_dialogue.append([type, pages])
+
+
 func _on_dialogue_finished() -> void:
-	is_open = false
+	if queued_dialogue:
+		var next_dialogue: Array = queued_dialogue.pop_front()
+		display_dialogue(next_dialogue[0], next_dialogue[1])
+	else:
+		is_open = false

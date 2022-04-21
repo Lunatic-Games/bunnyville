@@ -8,6 +8,7 @@ extents = Vector2( 10, 5.5 )
 [node name="Passage" type="Area2D"]
 position = Vector2( 254, 143 )
 script = ExtResource( 5 )
+to = "TOWN"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

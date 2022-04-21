@@ -18,6 +18,9 @@ config/icon="res://icon.png"
 
 DialogueManager="*res://managers/dialogue/dialogue_manager.tscn"
 AreaManager="*res://managers/area_manager.gd"
+ItemManager="*res://managers/item_manager.gd"
+InventoryManager="*res://managers/inventory_manager.gd"
+ProgressManager="*res://managers/progress_manager.gd"
 
 [display]
 

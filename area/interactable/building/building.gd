@@ -1,7 +1,11 @@
 extends "res://area/interactable/interactable.gd"
 
 
-export (AreaManager.AREA) var inside
+export (String, "TOWN",
+	"BUNNINGTON_HOUSE",
+	"BUNNSWORTH_HOUSE",
+	"BUNZ_HOUSE",
+	"BUNSELOT_HOUSE") var inside
 
 
 func interact():

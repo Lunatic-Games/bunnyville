@@ -1,7 +1,12 @@
 extends Area2D
 
 
-export (AreaManager.AREA) var to
+export (String, "TOWN",
+	"BUNNINGTON_HOUSE",
+	"BUNNSWORTH_HOUSE",
+	"BUNZ_HOUSE",
+	"BUNSELOT_HOUSE") var to
+
 export (String) var exit_name
 
 
