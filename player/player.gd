@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Player
 
 export (float) var current_speed = 0.0
 
@@ -28,3 +29,14 @@ func _physics_process(_delta: float) -> void:
 		$Sprite.scale.x = -sign(move.x) * abs($Sprite.scale.x)
 	
 	var _result: Vector2 = move_and_slide(move)
+
+
+func set_facing_direction(right_facing: bool = true):
+	if right_facing:
+		$Sprite.scale.x = abs($Sprite.scale.x)
+	else:
+		$Sprite.scale.x = -abs($Sprite.scale.x)
+
+
+func is_facing_right() -> bool:
+	return sign($Sprite.scale.x) > 0.0

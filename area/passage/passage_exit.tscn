@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://area/passage/passage_exit.gd" type="Script" id=1]
+
+[node name="PassageExit" type="Position2D"]
+script = ExtResource( 1 )

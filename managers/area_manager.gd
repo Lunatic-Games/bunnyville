@@ -1,12 +1,35 @@
 extends Node
 
 
+# For copy-and-pasting
+"""
+"TOWN",
+"BUNNINGTON_HOME",
+"BUNNSWORTH_HOME",
+"BUNZ_HOME",
+"BUNSELOT_HOME",
+"THE_CLEARING",
+"THE_DEEP_FOREST",
+"THE_TOWER",
+"THE_POND",
+"THE_GARDENS",
+"BUNNATRIX_HOME",
+"BUNSPROUT_HOME"
+"""
+
 const AREA_SCENES = {
 	"TOWN": preload("res://area/areas/town.tscn"),
-	"BUNNINGTON_HOUSE": preload("res://area/areas/houses/bunnington_home.tscn"),
-	"BUNNSWORTH_HOUSE": preload("res://area/areas/houses/bunnsworth_home.tscn"),
-	"BUNZ_HOUSE": preload("res://area/areas/houses/bunz_home.tscn"),
-	"BUNSELOT_HOUSE": preload("res://area/areas/houses/bunselot_home.tscn")
+	"BUNNINGTON_HOME": preload("res://area/areas/homes/bunnington_home.tscn"),
+	"BUNNSWORTH_HOME": preload("res://area/areas/homes/bunnsworth_home.tscn"),
+	"BUNZ_HOME": preload("res://area/areas/homes/bunz_home.tscn"),
+	"BUNSELOT_HOME": preload("res://area/areas/homes/bunselot_home.tscn"),
+	"THE_CLEARING": preload("res://area/areas/the_clearing.tscn"),
+	"THE_DEEP_FOREST": preload("res://area/areas/the_deep_forest.tscn"),
+	"THE_TOWER": preload("res://area/areas/the_tower.tscn"),
+	"THE_POND": preload("res://area/areas/the_pond.tscn"),
+	"THE_GARDENS": preload("res://area/areas/the_gardens.tscn"),
+	"BUNNATRIX_HOME": preload("res://area/areas/homes/bunnatrix_home.tscn"),
+	"BUNSPROUT_HOME": preload("res://area/areas/homes/bunsprout_home.tscn")
 }
 
 

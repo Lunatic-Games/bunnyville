@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://area/interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_assets/art/npcs/john_bunz.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3, 2.25 )
 
 [node name="JohnBunz" instance=ExtResource( 1 )]
 
@@ -15,3 +18,9 @@ margin_bottom = -17.0
 [node name="Sprite" type="Sprite" parent="." index="2"]
 position = Vector2( 0, -8 )
 texture = ExtResource( 2 )
+
+[node name="Collider" type="StaticBody2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
+position = Vector2( 0, 0.25 )
+shape = SubResource( 1 )

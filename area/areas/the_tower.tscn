@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
+
+[node name="TheTower" instance=ExtResource( 1 )]
+display_name = "The Tower"

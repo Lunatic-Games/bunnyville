@@ -2,10 +2,17 @@ extends Area2D
 
 
 export (String, "TOWN",
-	"BUNNINGTON_HOUSE",
-	"BUNNSWORTH_HOUSE",
-	"BUNZ_HOUSE",
-	"BUNSELOT_HOUSE") var to
+"BUNNINGTON_HOME",
+"BUNNSWORTH_HOME",
+"BUNZ_HOME",
+"BUNSELOT_HOME",
+"THE_CLEARING",
+"THE_DEEP_FOREST",
+"THE_TOWER",
+"THE_POND",
+"THE_GARDENS",
+"BUNNATRIX_HOME",
+"BUNSPROUT_HOME") var to
 
 export (String) var exit_name
 
