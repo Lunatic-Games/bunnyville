@@ -14,7 +14,8 @@ extends Node
 "THE_POND",
 "THE_GARDENS",
 "BUNNATRIX_HOME",
-"BUNSPROUT_HOME"
+"BUNSPROUT_HOME",
+"BUNSY_HOME"
 """
 
 const AREA_SCENES = {
@@ -29,7 +30,8 @@ const AREA_SCENES = {
 	"THE_POND": preload("res://area/areas/the_pond.tscn"),
 	"THE_GARDENS": preload("res://area/areas/the_gardens.tscn"),
 	"BUNNATRIX_HOME": preload("res://area/areas/homes/bunnatrix_home.tscn"),
-	"BUNSPROUT_HOME": preload("res://area/areas/homes/bunsprout_home.tscn")
+	"BUNSPROUT_HOME": preload("res://area/areas/homes/bunsprout_home.tscn"),
+	"BUNSY_HOME": preload("res://area/areas/homes/bunsy_home.tscn")
 }
 
 

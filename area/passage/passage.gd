@@ -12,7 +12,8 @@ export (String, "TOWN",
 "THE_POND",
 "THE_GARDENS",
 "BUNNATRIX_HOME",
-"BUNSPROUT_HOME") var to
+"BUNSPROUT_HOME",
+"BUNSY_HOME") var to
 
 export (String) var exit_name
 

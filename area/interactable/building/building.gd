@@ -12,7 +12,8 @@ export (String, "TOWN",
 "THE_POND",
 "THE_GARDENS",
 "BUNNATRIX_HOME",
-"BUNSPROUT_HOME") var inside
+"BUNSPROUT_HOME",
+"BUNSY_HOME") var inside
 
 
 func interact():
