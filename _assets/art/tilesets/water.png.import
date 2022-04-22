@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass.png-8cd2287a18395731f1b7f5b75c215a5c.stex"
+path="res://.import/water.png-b975762e5ad918c1274d6a49e289b818.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/tilesets/grass.png"
-dest_files=[ "res://.import/grass.png-8cd2287a18395731f1b7f5b75c215a5c.stex" ]
+source_file="res://_assets/art/tilesets/water.png"
+dest_files=[ "res://.import/water.png-b975762e5ad918c1274d6a49e289b818.stex" ]
 
 [params]
 
@@ -19,12 +19,12 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
