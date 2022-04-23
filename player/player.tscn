@@ -54,6 +54,8 @@ current_speed = 50.0
 [node name="Camera2D" type="Camera2D" parent="."]
 pause_mode = 2
 current = true
+smoothing_enabled = true
+smoothing_speed = 20.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -8 )

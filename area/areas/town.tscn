@@ -71,6 +71,12 @@ position = Vector2( 392, 275 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 240, 136 )
 
+[node name="Camera2D" parent="YSort/Player" index="0"]
+limit_left = -208
+limit_top = -176
+limit_right = 768
+limit_bottom = 448
+
 [node name="BunningtonHome" parent="YSort" index="1" instance=ExtResource( 3 )]
 position = Vector2( 88, 64 )
 inside = "BUNNINGTON_HOME"
@@ -102,3 +108,5 @@ text = "Home of the Bunz Brothers"
 [node name="BunselotSign" parent="YSort" index="8" instance=ExtResource( 2 )]
 position = Vector2( 336, 272 )
 text = "Home of Sir Bunselot"
+
+[editable path="YSort/Player"]

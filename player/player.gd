@@ -33,10 +33,10 @@ func _physics_process(_delta: float) -> void:
 
 func set_facing_direction(right_facing: bool = true):
 	if right_facing:
-		$Sprite.scale.x = abs($Sprite.scale.x)
-	else:
 		$Sprite.scale.x = -abs($Sprite.scale.x)
+	else:
+		$Sprite.scale.x = abs($Sprite.scale.x)
 
 
 func is_facing_right() -> bool:
-	return sign($Sprite.scale.x) > 0.0
+	return sign($Sprite.scale.x) < 0.0
