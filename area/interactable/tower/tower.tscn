@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://area/interactable/interactable.tscn" type="PackedScene" id=1]
-[ext_resource path="res://_assets/art/decorations/tower.png" type="Texture" id=2]
+[ext_resource path="res://_assets/art/buildings/tower.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.2041, 28.629 )

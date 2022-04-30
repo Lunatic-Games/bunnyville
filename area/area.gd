@@ -6,6 +6,7 @@ export (String) var display_name
 onready var player: Player = $YSort/Player as Player
 
 
+# Allows for multiple entrances to an area
 func place_player_at_exit(exit_name):
 	assert($Exits.has_node(exit_name))
 	

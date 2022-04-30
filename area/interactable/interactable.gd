@@ -4,6 +4,7 @@ extends Area2D
 var player_is_within_range: bool = false
 
 
+# Check if player is within range
 func _physics_process(_delta: float) -> void:
 	player_is_within_range = false
 	
@@ -14,6 +15,7 @@ func _physics_process(_delta: float) -> void:
 	$Prompt.visible = player_is_within_range and not DialogueManager.is_open
 
 
+# Check if interact is pressed and player is within range
 func _unhandled_input(event: InputEvent) -> void:
 	if DialogueManager.is_open:
 		return
@@ -23,5 +25,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_tree().set_input_as_handled()
 
 
+# Override
 func interact() -> void:
 	pass

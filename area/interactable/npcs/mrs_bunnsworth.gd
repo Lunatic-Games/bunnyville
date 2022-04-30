@@ -1,4 +1,4 @@
-extends "res://area/interactable/interactable.gd"
+extends "res://area/interactable/npcs/npc.gd"
 
 
 func interact():
@@ -14,12 +14,3 @@ func interact():
 		ProgressManager.progression_achieved("FLOUR_GIVEN_TO_MRS_BUNNSWORTH")
 	else:
 		display_dialogue(["Hm, I wanted to do some baking but I'm all out of flour..."])
-
-
-func display_dialogue(dialogue: Array):
-	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.PORTRAIT, 
-		dialogue, $Sprite.texture, "Mrs. Bunnsworth")
-
-
-func queue_dialogue(dialogue: Array):
-	DialogueManager.queue_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, dialogue)
