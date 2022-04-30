@@ -59,7 +59,7 @@ position = Vector2( 736, 128 )
 [node name="BunningtonExit" type="Position2D" parent="Exits" index="4"]
 position = Vector2( 88, 83 )
 
-[node name="BunsworthExit" type="Position2D" parent="Exits" index="5"]
+[node name="BunnsworthExit" type="Position2D" parent="Exits" index="5"]
 position = Vector2( 392, 83 )
 
 [node name="BunzExit" type="Position2D" parent="Exits" index="6"]
