@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://area/interactable/interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_assets/art/npcs/mr_bunnsworth.png" type="Texture" id=2]
 [ext_resource path="res://_assets/art/npcs/mr_bunnsworth_monocle.png" type="Texture" id=3]
 
