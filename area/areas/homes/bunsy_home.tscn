@@ -18,4 +18,12 @@ to = "THE_POND"
 exit_name = "HomeExit"
 
 [node name="Player" parent="YSort" index="0"]
-position = Vector2( 257, 134 )
+position = Vector2( 256, 136 )
+
+[node name="Camera2D" parent="YSort/Player" index="0"]
+limit_left = 16
+limit_top = -46
+limit_right = 496
+limit_bottom = 224
+
+[editable path="YSort/Player"]

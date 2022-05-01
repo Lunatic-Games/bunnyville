@@ -2,9 +2,9 @@
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://area/interactable/building/building.tscn" type="PackedScene" id=3]
-[ext_resource path="res://area/interactable/npcs/ms_bunsprout.tscn" type="PackedScene" id=4]
-[ext_resource path="res://area/interactable/sign/sign.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactable/npc/npcs/ms_bunsprout.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=5]
 
 [node name="TheGardens" instance=ExtResource( 1 )]
 display_name = "The Gardens"
@@ -18,10 +18,16 @@ rotation = 1.5708
 exit_name = "GardensExit"
 
 [node name="HomeExit" type="Position2D" parent="Exits" index="0"]
-position = Vector2( 208, 122 )
+position = Vector2( 208, 112 )
 
 [node name="Player" parent="YSort" index="0"]
-position = Vector2( 432, 136 )
+position = Vector2( 440, 136 )
+
+[node name="Camera2D" parent="YSort/Player" index="0"]
+limit_left = 0
+limit_top = 0
+limit_right = 480
+limit_bottom = 272
 
 [node name="MsBunsprout" parent="YSort" index="1" instance=ExtResource( 4 )]
 position = Vector2( 145, 142 )
@@ -33,3 +39,5 @@ inside = "BUNSPROUT_HOME"
 [node name="Sign" parent="YSort" index="3" instance=ExtResource( 5 )]
 position = Vector2( 264, 104 )
 text = "Home of Ms. Bunsprout"
+
+[editable path="YSort/Player"]

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://area/interactable/npcs/sir_bunselot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactable/npc/npcs/sir_bunselot.tscn" type="PackedScene" id=3]
 
 [node name="BunselotHome" instance=ExtResource( 1 )]
 display_name = "Home of Sir Bunselot"
@@ -18,7 +18,15 @@ position = Vector2( 256, 144 )
 exit_name = "BunselotExit"
 
 [node name="Player" parent="YSort" index="0"]
-position = Vector2( 257, 134 )
+position = Vector2( 256, 136 )
+
+[node name="Camera2D" parent="YSort/Player" index="0"]
+limit_left = 16
+limit_top = -46
+limit_right = 496
+limit_bottom = 224
 
 [node name="SirBunselot" parent="YSort" index="1" instance=ExtResource( 3 )]
 position = Vector2( 304, 64 )
+
+[editable path="YSort/Player"]

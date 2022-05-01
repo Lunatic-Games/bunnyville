@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
-[ext_resource path="res://area/interactable/sign/sign.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=2]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=3]
 
 [node name="TheClearing" instance=ExtResource( 1 )]
@@ -19,11 +19,19 @@ position = Vector2( 240, 8 )
 to = "THE_DEEP_FOREST"
 
 [node name="DeepForestExit" type="Position2D" parent="Exits" index="0"]
-position = Vector2( 240, 24 )
+position = Vector2( 240, 32 )
 
 [node name="Player" parent="YSort" index="0"]
-position = Vector2( 240, 248 )
+position = Vector2( 240, 240 )
+
+[node name="Camera2D" parent="YSort/Player" index="0"]
+limit_left = 0
+limit_top = 0
+limit_right = 480
+limit_bottom = 272
 
 [node name="Sign" parent="YSort" index="1" instance=ExtResource( 2 )]
 position = Vector2( 240, 136 )
 text = "This will be a statue"
+
+[editable path="YSort/Player"]

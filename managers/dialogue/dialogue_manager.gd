@@ -7,8 +7,8 @@ var is_open: bool = false
 var queued_dialogue: Array = []
 
 
-func display_dialogue(type: int, pages: Array, portrait: Texture = null, title: String = "") -> void:
-	if is_open:
+func display_dialogue(type: int, pages: Array, portrait: Texture = null, title: String = "", force_show: bool = false) -> void:
+	if is_open and not force_show:
 		queued_dialogue.append([type, pages, portrait, title])
 		return
 	
@@ -32,6 +32,6 @@ func display_dialogue(type: int, pages: Array, portrait: Texture = null, title: 
 func _on_dialogue_finished() -> void:
 	if queued_dialogue:
 		var next_dialogue: Array = queued_dialogue.pop_front()
-		display_dialogue(next_dialogue[0], next_dialogue[1], next_dialogue[2], next_dialogue[3])
+		display_dialogue(next_dialogue[0], next_dialogue[1], next_dialogue[2], next_dialogue[3], true)
 	else:
 		is_open = false

@@ -2,8 +2,8 @@
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://area/interactable/npcs/rabunzel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://area/interactable/tower/tower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactable/npc/npcs/rabunzel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactable/tower/tower.tscn" type="PackedScene" id=4]
 
 [node name="TheTower" instance=ExtResource( 1 )]
 display_name = "The Tower"

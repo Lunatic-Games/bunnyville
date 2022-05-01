@@ -2,13 +2,13 @@
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://area/interactable/building/building.tscn" type="PackedScene" id=3]
-[ext_resource path="res://area/interactable/npcs/old_man_bunsy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://area/interactable/sign/sign.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactable/npc/npcs/old_man_bunsy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=5]
 [ext_resource path="res://_assets/art/decorations/fishing_rod.png" type="Texture" id=6]
 [ext_resource path="res://_assets/art/tilesets/water.png" type="Texture" id=7]
 [ext_resource path="res://_assets/art/decorations/fish.png" type="Texture" id=8]
-[ext_resource path="res://area/interactable/cattail/cattail.tscn" type="PackedScene" id=9]
+[ext_resource path="res://interactable/cattail/cattail.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -186,10 +186,10 @@ position = Vector2( 240, 8 )
 exit_name = "PondExit"
 
 [node name="HomeExit" type="Position2D" parent="Exits" index="0"]
-position = Vector2( 432, 98 )
+position = Vector2( 496, 200 )
 
 [node name="Player" parent="YSort" index="0"]
-position = Vector2( 240, 48 )
+position = Vector2( 240, 32 )
 
 [node name="Camera2D" parent="YSort/Player" index="0"]
 limit_left = -96

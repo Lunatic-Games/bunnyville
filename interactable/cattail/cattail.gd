@@ -1,4 +1,4 @@
-extends "res://area/interactable/interactable.gd"
+extends "res://interactable/interactable.gd"
 
 
 

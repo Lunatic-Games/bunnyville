@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
-[ext_resource path="res://area/interactable/sign/sign.tscn" type="PackedScene" id=2]
-[ext_resource path="res://area/interactable/building/building.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
@@ -57,16 +57,16 @@ position = Vector2( -176, 128 )
 position = Vector2( 736, 128 )
 
 [node name="BunningtonExit" type="Position2D" parent="Exits" index="4"]
-position = Vector2( 88, 83 )
+position = Vector2( 88, 88 )
 
 [node name="BunnsworthExit" type="Position2D" parent="Exits" index="5"]
-position = Vector2( 392, 83 )
+position = Vector2( 392, 88 )
 
 [node name="BunzExit" type="Position2D" parent="Exits" index="6"]
-position = Vector2( 88, 275 )
+position = Vector2( 88, 280 )
 
 [node name="BunselotExit" type="Position2D" parent="Exits" index="7"]
-position = Vector2( 392, 275 )
+position = Vector2( 392, 280 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 240, 136 )
