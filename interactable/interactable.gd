@@ -8,9 +8,10 @@ var player_is_within_range: bool = false
 func _physics_process(_delta: float) -> void:
 	player_is_within_range = false
 	
-	for body in get_overlapping_bodies():
-		if body.is_in_group("player"):
-			player_is_within_range = true
+	if monitoring:  # Can turn monitoring false if you don't want to check for player
+		for body in get_overlapping_bodies():
+			if body.is_in_group("player"):
+				player_is_within_range = true
 	
 	$Prompt.visible = player_is_within_range and not DialogueManager.is_open
 

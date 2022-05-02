@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=2]
 [ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactable/garden_pot/garden_pot.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -108,5 +109,8 @@ text = "Home of the Bunz Brothers"
 [node name="BunselotSign" parent="YSort" index="8" instance=ExtResource( 2 )]
 position = Vector2( 336, 272 )
 text = "Home of Sir Bunselot"
+
+[node name="GardenPot" parent="YSort" index="9" instance=ExtResource( 5 )]
+position = Vector2( 445, 76 )
 
 [editable path="YSort/Player"]
