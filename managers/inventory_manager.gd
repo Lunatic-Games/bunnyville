@@ -4,6 +4,7 @@ extends Node
 signal inventory_changed
 
 var items: Dictionary = {}  # Item: quantity
+var num_carrots = 0
 
 
 func has_item(item_name: String, minimum_quantity: int = 1) -> bool:
@@ -14,6 +15,11 @@ func has_item(item_name: String, minimum_quantity: int = 1) -> bool:
 func add_item(item_name: String, quantity: int = 1) -> void:
 	assert(ItemManager.ITEMS.has(item_name))
 	items[item_name] = items.get(item_name, 0) + quantity
+	emit_signal("inventory_changed")
+
+
+func add_carrot(quantity: int = 1):
+	num_carrots += quantity
 	emit_signal("inventory_changed")
 
 
