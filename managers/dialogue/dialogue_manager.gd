@@ -14,8 +14,9 @@ func display_dialogue(type: int, pages: Array, portrait: Texture = null, title: 
 		queued_dialogue.append([type, pages, portrait, title])
 		return
 	
+	if not is_open:
+		emit_signal("open_toggled", true)
 	is_open = true
-	emit_signal("open_toggled", true)
 	
 	match type:
 		DIALOGUE_TYPE.FULL:

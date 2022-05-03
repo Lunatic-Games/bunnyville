@@ -2,8 +2,18 @@ extends "res://interactable/interactable.gd"
 
 
 
+func _ready():
+	if ProgressManager.cattails_harvested.has(name):
+		queue_free()
+
+
 func interact():
-	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["You'll need a shovel to harvest this."])
+	if InventoryManager.has_item("SHOVEL"):
+		InventoryManager.add_item("CATTAIL")
+		ProgressManager.mark_cattail_harvested(name)
+		queue_free()
+	else:
+		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["You'll need a shovel to harvest this."])
 
 
 func _on_Collider_body_entered(player: Player):

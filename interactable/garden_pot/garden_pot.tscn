@@ -15,7 +15,6 @@ script = ExtResource( 4 )
 position = Vector2( -0.5, -4 )
 
 [node name="Prompt" parent="." index="1"]
-visible = true
 margin_left = -7.5
 margin_right = 6.5
 
@@ -29,6 +28,7 @@ position = Vector2( -1, -11 )
 texture = ExtResource( 3 )
 
 [node name="Collider" type="StaticBody2D" parent="." index="4"]
+position = Vector2( -1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
 position = Vector2( -0.5, -2 )

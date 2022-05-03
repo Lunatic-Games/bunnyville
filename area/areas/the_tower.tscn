@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
 [ext_resource path="res://interactable/npc/npcs/rabunzel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interactable/tower/tower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactable/npc/npcs/sir_bunselot.tscn" type="PackedScene" id=5]
 
 [node name="TheTower" instance=ExtResource( 1 )]
 display_name = "The Tower"
@@ -26,9 +27,13 @@ limit_right = 496
 limit_bottom = 288
 
 [node name="Rabunzel" parent="YSort" index="1" instance=ExtResource( 3 )]
-position = Vector2( 327.378, -116.276 )
+position = Vector2( 207, 131 )
 
 [node name="Tower" parent="YSort" index="2" instance=ExtResource( 4 )]
 position = Vector2( 283, 130 )
+
+[node name="SirBunselot" parent="YSort" index="3" instance=ExtResource( 5 )]
+position = Vector2( 159, 131 )
+by_tower = true
 
 [editable path="YSort/Player"]
