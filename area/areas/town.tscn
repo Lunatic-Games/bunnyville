@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interactable/sign/sign.tscn" type="PackedScene" id=2]
 [ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interactable/garden_pot/garden_pot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interactable/chest/chest.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -112,5 +113,17 @@ text = "Home of Sir Bunselot"
 
 [node name="GardenPot" parent="YSort" index="9" instance=ExtResource( 5 )]
 position = Vector2( 445, 76 )
+
+[node name="Chest" parent="YSort" index="10" instance=ExtResource( 6 )]
+position = Vector2( 192, 99 )
+item_contained = "BLUEPRINTS"
+
+[node name="Chest2" parent="YSort" index="11" instance=ExtResource( 6 )]
+position = Vector2( 277, 97 )
+item_contained = "HAMMER"
+
+[node name="Chest3" parent="YSort" index="12" instance=ExtResource( 6 )]
+position = Vector2( 287, 156 )
+item_contained = "MONOCLE"
 
 [editable path="YSort/Player"]

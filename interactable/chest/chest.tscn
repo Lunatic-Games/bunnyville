@@ -4,7 +4,7 @@
 [ext_resource path="res://_assets/art/interactable/chest.png" type="Texture" id=2]
 [ext_resource path="res://interactable/chest/chest.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 5 )
 
 [node name="Chest" instance=ExtResource( 1 )]
@@ -14,20 +14,21 @@ script = ExtResource( 3 )
 position = Vector2( 0, -6 )
 
 [node name="Closed" type="Sprite" parent="." index="2"]
-position = Vector2( 0, -8 )
+position = Vector2( 0, -12 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 20, 24 )
 
 [node name="Opened" type="Sprite" parent="." index="3"]
 visible = false
-position = Vector2( 0, -8 )
+position = Vector2( 0, -12 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 20, 0, 20, 24 )
 
 [node name="Collider" type="StaticBody2D" parent="." index="4"]
+position = Vector2( 0, -4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
 position = Vector2( 0, -1 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )

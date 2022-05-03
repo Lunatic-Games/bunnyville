@@ -9,6 +9,7 @@ const PROGRESSIONS: Array = [
 ]
 
 var achieved: Array = []
+var chests_opened: Array = []
 
 
 func progression_achieved(progression: String) -> void:
@@ -21,3 +22,7 @@ func progression_achieved(progression: String) -> void:
 func has_progression(progression: String) -> bool:
 	assert(PROGRESSIONS.has(progression))
 	return achieved.has(progression)
+
+
+func mark_chest_opened(chest_name: String) -> void:
+	chests_opened.append(chest_name)
