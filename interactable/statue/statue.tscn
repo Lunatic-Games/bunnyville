@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_assets/art/buildings/statue.png" type="Texture" id=2]
+[ext_resource path="res://interactable/statue/statue.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28, 11 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 11 )
+
+[node name="Statue" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+position = Vector2( 0, -22 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, 17 )
+shape = SubResource( 2 )
+
+[node name="Prompt" parent="." index="2"]
+margin_top = -25.0
+margin_bottom = -11.0
+
+[node name="Collider" type="StaticBody2D" parent="." index="3"]
+position = Vector2( 0, -22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
+position = Vector2( 0, 22 )
+shape = SubResource( 1 )
