@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 
+signal open_toggled(is_open)
+
 enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL}
 
 var is_open: bool = false
@@ -13,6 +15,7 @@ func display_dialogue(type: int, pages: Array, portrait: Texture = null, title: 
 		return
 	
 	is_open = true
+	emit_signal("open_toggled", true)
 	
 	match type:
 		DIALOGUE_TYPE.FULL:
@@ -35,3 +38,4 @@ func _on_dialogue_finished() -> void:
 		display_dialogue(next_dialogue[0], next_dialogue[1], next_dialogue[2], next_dialogue[3], true)
 	else:
 		is_open = false
+		emit_signal("open_toggled", false)

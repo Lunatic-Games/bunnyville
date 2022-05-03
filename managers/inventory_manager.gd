@@ -1,6 +1,8 @@
 extends Node
 
-	
+
+signal inventory_changed
+
 var items: Dictionary = {}  # Item: quantity
 
 
@@ -12,6 +14,7 @@ func has_item(item_name: String, minimum_quantity: int = 1) -> bool:
 func add_item(item_name: String, quantity: int = 1) -> void:
 	assert(ItemManager.ITEMS.has(item_name))
 	items[item_name] = items.get(item_name, 0) + quantity
+	emit_signal("inventory_changed")
 
 
 func remove_item(item_name: String, quantity: int = 1) -> void:
@@ -20,11 +23,13 @@ func remove_item(item_name: String, quantity: int = 1) -> void:
 	items[item_name] = items[item_name] - quantity
 	if items.get(item_name) == 0:
 		var _had_item: bool = items.erase(item_name)
+	emit_signal("inventory_changed")
 
 
 func remove_all_of_item(item_name: String) -> void:
 	assert(ItemManager.ITEMS.has(item_name))
 	var _had_item: bool = items.erase(item_name)
+	emit_signal("inventory_changed")
 
 
 func get_amount_of_item(item_name: String) -> int:
