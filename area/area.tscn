@@ -26,3 +26,9 @@ format = 1
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
+
+[node name="Buildings" type="YSort" parent="YSort"]
+
+[node name="Objects" type="YSort" parent="YSort"]
+
+[node name="NPCs" type="YSort" parent="YSort"]
