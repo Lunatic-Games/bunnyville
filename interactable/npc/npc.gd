@@ -9,8 +9,8 @@ onready var portrait = $Sprite.texture
 # Put into a function for easier calling
 func display_dialogue(dialogue: Array):
 	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.PORTRAIT, 
-		dialogue, portrait, title)
+		dialogue, true, portrait, title)
 
 
 func display_action(dialogue: Array):
-	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, dialogue) 
+	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, dialogue, false) 

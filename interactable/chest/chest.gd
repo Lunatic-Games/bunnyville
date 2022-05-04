@@ -12,7 +12,7 @@ func _ready():
 
 func interact():
 	if locked:
-		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["It is locked..."])
+		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["It is locked..."], false)
 	else:
 		if item_contained:
 			InventoryManager.add_item(item_contained)

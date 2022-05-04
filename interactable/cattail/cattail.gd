@@ -13,7 +13,7 @@ func interact():
 		ProgressManager.mark_cattail_harvested(name)
 		queue_free()
 	else:
-		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["You'll need a shovel to harvest this."])
+		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["You'll need a shovel to harvest this."], false)
 
 
 func _on_Collider_body_entered(player: Player):
