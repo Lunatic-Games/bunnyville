@@ -37,22 +37,54 @@ margin_bottom = 37.0
 alignment = 1
 
 [node name="ItemSlot" parent="ItemInventory/Items" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 0.0
+margin_top = 0.0
 margin_right = 32.0
+margin_bottom = 32.0
 
 [node name="ItemSlot2" parent="ItemInventory/Items" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 36.0
+margin_top = 0.0
 margin_right = 68.0
+margin_bottom = 32.0
 
 [node name="ItemSlot3" parent="ItemInventory/Items" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 72.0
+margin_top = 0.0
+margin_right = 104.0
+margin_bottom = 32.0
 
 [node name="ItemSlot4" parent="ItemInventory/Items" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 108.0
+margin_top = 0.0
 margin_right = 140.0
+margin_bottom = 32.0
 
 [node name="ItemSlot5" parent="ItemInventory/Items" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 144.0
+margin_top = 0.0
 margin_right = 176.0
+margin_bottom = 32.0
 
 [node name="CarrotInventory" type="MarginContainer" parent="."]
 anchor_top = 1.0
@@ -63,9 +95,6 @@ custom_constants/margin_right = 5
 custom_constants/margin_top = 5
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CarrotInventory"]
 margin_left = 5.0
@@ -86,9 +115,6 @@ custom_constants/margin_right = 6
 custom_constants/margin_top = 6
 custom_constants/margin_left = 6
 custom_constants/margin_bottom = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Carrots" type="VBoxContainer" parent="CarrotInventory/NinePatchRect/MarginContainer"]
 margin_left = 6.0

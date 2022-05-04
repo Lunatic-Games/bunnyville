@@ -15,3 +15,19 @@ const ITEMS = {
 	"FLOUR": preload("res://_assets/art/items/flour.png"),
 	"COOKIES": preload("res://_assets/art/items/cookies.png")
 }
+
+
+const DISPLAY_NAMES = {
+	"BLUEPRINTS": "Blueprints",
+	"SWORD": "Sword",
+	"CARROT": "Carrot",
+	"HAMMER": "Hammer",
+	"ROPE": "Rope",
+	"FLOWERS": "Flowers",
+	"WORMS": "Worms",
+	"MONOCLE": "Monocle",
+	"SHOVEL": "Shovel",
+	"CATTAIL": "Cattail",
+	"FLOUR": "Flour",
+	"COOKIES": "Cookies"
+}
