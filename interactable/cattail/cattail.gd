@@ -9,6 +9,8 @@ func _ready():
 
 func interact():
 	if InventoryManager.has_item("SHOVEL"):
+		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.ITEM, ["You harvest a cattail."],
+			false, ItemManager.ITEMS["CATTAIL"])
 		InventoryManager.add_item("CATTAIL")
 		ProgressManager.mark_cattail_harvested(name)
 		queue_free()

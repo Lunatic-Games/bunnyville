@@ -10,7 +10,7 @@ func interact():
 		display_action(["Bunnatrix takes the cattails."])
 		InventoryManager.remove_all_of_item("CATTAIL")
 		display_dialogue(["Here, take this for your troubles."])
-		display_action(["Bunnatrix gives you a carrot."])
+		display_item_received(["Bunnatrix gives you a carrot."], "CARROT")
 		InventoryManager.add_carrot()
 		ProgressManager.progression_achieved("CATTAILS_GIVEN_TO_BUNNATRIX")
 	elif ProgressManager.has_progression("CATTAILS_GIVEN_TO_BUNNATRIX"):

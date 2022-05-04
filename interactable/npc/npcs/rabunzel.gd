@@ -9,7 +9,7 @@ func _ready():
 func interact():
 	if ProgressManager.has_progression("RABUNZEL_DOWN_FROM_TOWER") and not ProgressManager.has_progression("CARROT_RECEIVED_FROM_RABUNZEL"):
 		display_dialogue(["Thank you for your help getting me down! I want you to have this:"])
-		display_action(["Rabunzel gives you a carrot"])
+		display_item_received(["Rabunzel gives you a carrot"], "CARROT")
 		InventoryManager.add_carrot()
 		ProgressManager.progression_achieved("CARROT_RECEIVED_FROM_RABUNZEL")
 	elif ProgressManager.has_progression("RABUNZEL_DOWN_FROM_TOWER"):

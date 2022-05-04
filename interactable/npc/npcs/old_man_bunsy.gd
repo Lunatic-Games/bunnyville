@@ -10,7 +10,7 @@ func interact():
 		InventoryManager.remove_item("WORMS")
 		ProgressManager.progression_achieved("WORMS_GIVEN_TO_BUNSY")
 		display_dialogue(["Take this for your troubles!"])
-		display_action(["Old Many Bunsy gives you a carrot."])
+		display_item_received(["Old Many Bunsy gives you a carrot."], "CARROT")
 		InventoryManager.add_carrot()
 	else:
 		display_dialogue(["Hm, the fish sure aren't biting today... Maybe I just need the right bait?"])

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carrot_silhouette.png-4fc3ce4de51496822f4657ff81911ad4.stex"
+path="res://.import/carrot_small.png-adde87ebf0cea4a7de3dd8999ce6b44c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/items/carrot_silhouette.png"
-dest_files=[ "res://.import/carrot_silhouette.png-4fc3ce4de51496822f4657ff81911ad4.stex" ]
+source_file="res://_assets/art/items/carrot_small.png"
+dest_files=[ "res://.import/carrot_small.png-adde87ebf0cea4a7de3dd8999ce6b44c.stex" ]
 
 [params]
 

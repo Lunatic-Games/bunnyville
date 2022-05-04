@@ -58,6 +58,8 @@ func next_page() -> void:
 	
 	page_i += 1
 	label.text = pages[page_i]
+	if label.visible_characters >= 0:
+		label.visible_characters = 0
 
 
 func skip_to_end() -> void:

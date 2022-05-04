@@ -14,3 +14,8 @@ func display_dialogue(dialogue: Array):
 
 func display_action(dialogue: Array):
 	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, dialogue, false) 
+
+
+func display_item_received(dialogue: Array, item_name: String):
+	DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.ITEM, dialogue, false,
+		ItemManager.ITEMS[item_name])

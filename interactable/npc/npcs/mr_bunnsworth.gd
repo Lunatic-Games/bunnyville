@@ -8,7 +8,7 @@ func interact():
 		InventoryManager.remove_item("MONOCLE")
 		ProgressManager.progression_achieved("MONOCLE_GIVEN_TO_MR_BUNNSWORTH")
 		display_dialogue(["I had been looking all over for that, thank you!", "Take this for your troubles."])
-		display_action(["Mr. Bunnsworth gives you a shovel."])
+		display_item_received(["Mr. Bunnsworth gives you a shovel."], "SHOVEL")
 		InventoryManager.add_item("SHOVEL")
 		display_dialogue(["I find it very helpful for digging up plants!"])
 	elif ProgressManager.progression_achieved("MONOCLE_GIVEN_TO_MR_BUNNSWORTH"):

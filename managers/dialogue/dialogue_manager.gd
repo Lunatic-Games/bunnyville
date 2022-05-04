@@ -3,7 +3,7 @@ extends CanvasLayer
 
 signal open_toggled(is_open)
 
-enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL}
+enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL, ITEM}
 
 var is_open: bool = false
 var queued_dialogue: Array = []
@@ -23,12 +23,20 @@ func display_dialogue(type: int, pages: Array, animate_text: bool = true, portra
 			$FullDialogue.display(pages, animate_text)
 			$PortraitDialogue.hide()
 			$SmallDialogue.hide()
+			$ItemDialogue.hide()
 		DIALOGUE_TYPE.PORTRAIT:
 			$PortraitDialogue.display(pages, animate_text, portrait, title)
 			$FullDialogue.hide()
 			$SmallDialogue.hide()
+			$ItemDialogue.hide()
 		DIALOGUE_TYPE.SMALL:
 			$SmallDialogue.display(pages, animate_text)
+			$FullDialogue.hide()
+			$PortraitDialogue.hide()
+			$ItemDialogue.hide()
+		DIALOGUE_TYPE.ITEM:
+			$ItemDialogue.display(pages, animate_text, portrait)
+			$SmallDialogue.hide()
 			$FullDialogue.hide()
 			$PortraitDialogue.hide()
 

@@ -13,7 +13,7 @@ func interact():
 		InventoryManager.remove_all_of_item("FLOUR")
 		ProgressManager.progression_achieved("FLOUR_GIVEN_TO_MRS_BUNNSWORTH")
 		display_dialogue(["Here, take these back to Mrs. Bunnington."])
-		display_action(["She gives you some freshly baked cookies."])
+		display_item_received(["She gives you some freshly baked cookies."], "COOKIES")
 		InventoryManager.add_item("COOKIES")
 	else:
 		display_dialogue(["Hm, I wanted to do some baking but I'm all out of flour..."])

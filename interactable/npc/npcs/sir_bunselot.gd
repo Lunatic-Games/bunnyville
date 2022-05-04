@@ -31,13 +31,13 @@ func interact():
 			display_dialogue(["I'll meet you by the tower!"])
 			
 	elif InventoryManager.has_item("SWORD"):
-		display_dialogue(["How am I supposed to be a knight of the realm when I don't even have a sword?", "What's this? I can this sword?",
+		display_dialogue(["How am I supposed to be a knight of the realm when I don't even have a sword?", "What's this? I can take this sword?",
 			"Oh you don't know how much this means to me! Thank you!"])
 		display_action(["Sir Bunselot takes the sword."])
 		InventoryManager.remove_item("SWORD")
 		ProgressManager.progression_achieved("SWORD_GIVEN_TO_SIR_BUNSELOT")
 		display_dialogue(["Here, take this for your troubles."])
-		display_action(["Sir Bunselot gives you a carrot."])
+		display_item_received(["Sir Bunselot gives you a carrot."], "CARROT")
 		InventoryManager.add_carrot()
 		display_dialogue(["I better get over to the tower now! I hear there is a princess in distress!"])
 		
