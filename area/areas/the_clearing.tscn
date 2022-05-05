@@ -1,9 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interactable/statue/statue.tscn" type="PackedScene" id=2]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=3]
 [ext_resource path="res://_assets/shaders/godray.tres" type="Shader" id=4]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 121, 30.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 120.5, 31.25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 112, 30.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 24, 159.25 )
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -32,6 +44,32 @@ tile_data = PoolIntArray( 65553, 1, 0, 131086, 9, 0, 262147, 1, 0, 262153, 9, 0,
 
 [node name="TreeBases" parent="." index="2"]
 tile_data = PoolIntArray( -1, 10, 0, -65535, 10, 0, -65533, 10, 0, -65531, 10, 0, -65529, 10, 0, -65527, 10, 0, -65525, 10, 0, -65518, 10, 0, -65516, 10, 0, -65514, 10, 0, -65512, 10, 0, -65510, 10, 0, -65508, 10, 0, 0, 10, 0, 2, 10, 0, 4, 10, 0, 6, 10, 0, 8, 10, 0, 10, 10, 0, 12, 10, 0, 17, 10, 0, 19, 10, 0, 21, 10, 0, 23, 10, 0, 25, 10, 0, 27, 10, 0, 29, 10, 0, 131071, 10, 0, 65564, 10, 0, 131072, 10, 0, 131101, 10, 0, 262143, 10, 0, 196636, 10, 0, 262144, 10, 0, 262173, 10, 0, 393215, 10, 0, 327708, 10, 0, 393216, 10, 0, 393245, 10, 0, 524287, 10, 0, 458780, 10, 0, 524288, 10, 0, 524317, 10, 0, 655359, 10, 0, 589852, 10, 0, 655360, 10, 0, 655389, 10, 0, 786431, 10, 0, 720924, 10, 0, 786432, 10, 0, 786461, 10, 0, 917503, 10, 0, 851996, 10, 0, 917504, 10, 0, 917533, 10, 0, 1048575, 10, 0, 983068, 10, 0, 1048576, 10, 0, 1048605, 10, 0, 1179647, 10, 0, 1114140, 10, 0, 1179648, 10, 0, 1179677, 10, 0, 1310719, 10, 0, 1245212, 10, 0, 1310720, 10, 0, 1310749, 10, 0, 1441791, 10, 0, 1376257, 10, 0, 1376259, 10, 0, 1376261, 10, 0, 1376263, 10, 0, 1376265, 10, 0, 1376267, 10, 0, 1376274, 10, 0, 1376276, 10, 0, 1376278, 10, 0, 1376280, 10, 0, 1376282, 10, 0, 1376284, 10, 0, 1441792, 10, 0, 1441794, 10, 0, 1441796, 10, 0, 1441798, 10, 0, 1441800, 10, 0, 1441802, 10, 0, 1441804, 10, 0, 1441809, 10, 0, 1441811, 10, 0, 1441813, 10, 0, 1441815, 10, 0, 1441817, 10, 0, 1441819, 10, 0, 1441821, 10, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TreeBases" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="0"]
+position = Vector2( 111, 19 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="1"]
+position = Vector2( 111.5, 391.25 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="2"]
+position = Vector2( 400, 392 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="3"]
+position = Vector2( 392, 17.5 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="4"]
+position = Vector2( 480, 208.75 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="5"]
+position = Vector2( 16, 200 )
+shape = SubResource( 4 )
 
 [node name="Passage" parent="Passages" index="0" instance=ExtResource( 3 )]
 position = Vector2( 256, 352 )
