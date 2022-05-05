@@ -38,7 +38,7 @@ position = Vector2( 256, 352 )
 exit_name = "ClearingExit"
 
 [node name="Passage2" parent="Passages" index="1" instance=ExtResource( 3 )]
-position = Vector2( 256, 32 )
+position = Vector2( 256, 16 )
 to = "THE_DEEP_FOREST"
 
 [node name="DeepForestExit" type="Position2D" parent="Exits" index="0"]

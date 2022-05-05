@@ -8,7 +8,7 @@
 [ext_resource path="res://interactable/chest/chest.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 170, 30.5 )
+extents = Vector2( 62, 29 )
 
 [node name="Town" instance=ExtResource( 1 )]
 display_name = "Town Center"
@@ -61,7 +61,7 @@ position = Vector2( 580, 16 )
 shape = SubResource( 1 )
 
 [node name="ClearingPassage" parent="Passages" index="0" instance=ExtResource( 4 )]
-position = Vector2( 384, 24 )
+position = Vector2( 384, 16 )
 to = "THE_CLEARING"
 
 [node name="PondPassage" parent="Passages" index="1" instance=ExtResource( 4 )]
@@ -74,7 +74,7 @@ rotation = 1.5708
 to = "THE_TOWER"
 
 [node name="GardensPassage" parent="Passages" index="3" instance=ExtResource( 4 )]
-position = Vector2( 16, 304 )
+position = Vector2( 0, 304 )
 rotation = 1.5708
 to = "THE_GARDENS"
 
@@ -88,7 +88,7 @@ position = Vector2( 384, 552 )
 position = Vector2( 40, 304 )
 
 [node name="TowerExit" type="Position2D" parent="Exits" index="3"]
-position = Vector2( 728, 304 )
+position = Vector2( 720, 304 )
 
 [node name="BunningtonExit" type="Position2D" parent="Exits" index="4"]
 position = Vector2( 232, 272 )
