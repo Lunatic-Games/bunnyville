@@ -19,6 +19,12 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 
+[node name="TreeBases" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+
 [node name="Passages" type="Node2D" parent="."]
 
 [node name="Exits" type="Node2D" parent="."]
@@ -32,3 +38,10 @@ format = 1
 [node name="Objects" type="YSort" parent="YSort"]
 
 [node name="NPCs" type="YSort" parent="YSort"]
+
+[node name="TreeTops" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+cell_y_sort = true
+format = 1
