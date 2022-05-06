@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://interactable/npc/npcs/sir_bunselot.tscn" type="PackedScene" id=5]
 [ext_resource path="res://area/tileset/tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://interactable/chest/chest.tscn" type="PackedScene" id=7]
+[ext_resource path="res://_assets/art/buildings/tower_rope.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 239.5, 29 )
@@ -140,9 +141,13 @@ rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="YSort/Buildings/Tower" index="1"]
-position = Vector2( 0.168335, 55.3013 )
+position = Vector2( 0, 55.301 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -144 )
+
+[node name="Rope" type="Sprite" parent="YSort/Buildings/Tower/Sprite" index="0"]
+position = Vector2( 0, -154 )
+texture = ExtResource( 8 )
 
 [node name="BlueprintsChest" parent="YSort/Objects" index="0" instance=ExtResource( 7 )]
 position = Vector2( 776, 72 )
@@ -151,6 +156,7 @@ unlock_text = "Inside you find a set of blueprints!"
 
 [node name="Rabunzel" parent="YSort/NPCs" index="0" instance=ExtResource( 3 )]
 position = Vector2( 288, 128 )
+rope_node_path = NodePath("../../Buildings/Tower/Sprite/Rope")
 
 [node name="SirBunselot" parent="YSort/NPCs" index="1" instance=ExtResource( 5 )]
 position = Vector2( 248, 129 )

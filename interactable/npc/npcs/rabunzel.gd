@@ -1,6 +1,9 @@
 extends "res://interactable/npc/npc.gd"
 
 
+export (NodePath) var rope_node_path
+
+
 func _ready():
 	update_state()
 	ProgressManager.connect("progressed", self, "update_state")
@@ -25,6 +28,8 @@ func update_state(_progression = null):
 	if ProgressManager.has_progression("RABUNZEL_DOWN_FROM_TOWER"):
 		$Sprite.visible = true
 		$Collider/CollisionShape2D.set_deferred("disabled", false)
+		get_node(rope_node_path).visible = true
 	else:
 		$Sprite.visible = false
 		$Collider/CollisionShape2D.set_deferred("disabled", true)
+		get_node(rope_node_path).visible = false
