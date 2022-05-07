@@ -6,6 +6,15 @@ onready var transition_player: AnimationPlayer = $Overlay/Transition/AnimationPl
 onready var area_name: Label = $Overlay/AreaName
 onready var area_name_player: AnimationPlayer = $Overlay/AreaName/AnimationPlayer
 
+onready var pause_menu = $Overlay/PauseMenu
+
+
+func _unhandled_input(event):
+	if event.is_action_pressed("pause"):
+		get_tree().set_input_as_handled()
+		get_tree().paused = true
+		pause_menu.show()
+
 
 func change_area(new_area: String, player_exit: String = "") -> void:
 	# Transition to black

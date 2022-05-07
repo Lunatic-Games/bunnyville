@@ -1,0 +1,148 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://_assets/fonts/Retro Gaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://_assets/ui/grabber_highlight.png" type="Texture" id=2]
+[ext_resource path="res://_assets/ui/grabber.png" type="Texture" id=3]
+[ext_resource path="res://_assets/ui/slider.png" type="Texture" id=4]
+[ext_resource path="res://ui/text_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/menus/settings_menu.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=13]
+size = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=14]
+size = 14
+extra_spacing_top = -2
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 100, 2 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[node name="SettingsMenu" type="VBoxContainer"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+script = ExtResource( 6 )
+
+[node name="FullscreenButton" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_top = 115.0
+margin_bottom = 133.0
+custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
+custom_colors/font_color_pressed = Color( 0.545098, 0.576471, 0.686275, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Fullscreen"
+
+[node name="ExitFullscreenButton" parent="." instance=ExtResource( 5 )]
+margin_top = 95.0
+margin_bottom = 113.0
+custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
+custom_colors/font_color_pressed = Color( 0.545098, 0.576471, 0.686275, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Exit Fullscreen"
+
+[node name="MusicContainer" type="HBoxContainer" parent="."]
+margin_top = 117.0
+margin_right = 480.0
+margin_bottom = 133.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MusicContainer"]
+margin_left = 159.0
+margin_right = 216.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 57, 0 )
+custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Music: "
+valign = 1
+
+[node name="MusicSlider" type="HSlider" parent="MusicContainer"]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 100, 0 )
+focus_mode = 0
+size_flags_vertical = 1
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 15 )
+custom_styles/grabber_area_highlight = SubResource( 16 )
+custom_styles/grabber_area = SubResource( 17 )
+
+[node name="SFXContainer" type="HBoxContainer" parent="."]
+margin_top = 137.0
+margin_right = 480.0
+margin_bottom = 153.0
+alignment = 1
+
+[node name="Label" type="Label" parent="SFXContainer"]
+margin_left = 159.0
+margin_right = 216.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 57, 0 )
+custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "SFX: "
+align = 1
+valign = 1
+
+[node name="SFXSlider" type="HSlider" parent="SFXContainer"]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 100, 0 )
+focus_mode = 0
+size_flags_vertical = 1
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 15 )
+custom_styles/grabber_area_highlight = SubResource( 16 )
+custom_styles/grabber_area = SubResource( 17 )
+
+[node name="BackButton" parent="." instance=ExtResource( 5 )]
+margin_top = 157.0
+margin_bottom = 175.0
+custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
+custom_colors/font_color_pressed = Color( 0.545098, 0.576471, 0.686275, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Back"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="FullscreenButton" to="." method="_on_FullscreenButton_pressed"]
+[connection signal="pressed" from="ExitFullscreenButton" to="." method="_on_ExitFullscreenButton_pressed"]
+[connection signal="value_changed" from="MusicContainer/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="SFXContainer/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
