@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://_assets/fonts/04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/menus/main_menu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
+font_data = ExtResource( 1 )
+
+[node name="MainMenu" type="ColorRect"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.454902 )
+script = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -240.0
+margin_top = 13.0
+margin_right = 240.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 1, 0.811765, 0.541176, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Bunnyville"
+align = 1
+valign = 1
+
+[node name="Credits" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -240.0
+margin_top = 31.0
+margin_right = 240.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "By Joe Zlonicky"
+align = 1
+valign = 1
+
+[node name="PressAnything" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -240.0
+margin_top = -41.0
+margin_right = 240.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Press Anything to Start"
+align = 1
+valign = 1
