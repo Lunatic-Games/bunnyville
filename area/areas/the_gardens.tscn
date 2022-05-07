@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
@@ -10,6 +10,36 @@
 [ext_resource path="res://decorations/full_pillar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://decorations/archway.tscn" type="PackedScene" id=9]
 [ext_resource path="res://decorations/flowers.tscn" type="PackedScene" id=10]
+[ext_resource path="res://area/particles/butterflies.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.0631229, 0.923588, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="Curve" id=12]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0401235, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.950617, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 12 )
+
+[sub_resource type="ParticlesMaterial" id=14]
+emission_shape = 2
+emission_box_extents = Vector3( 450, 200, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 13 )
+color = Color( 0.996078, 0.560784, 1, 1 )
+color_ramp = SubResource( 11 )
+hue_variation = 0.45
+hue_variation_random = 0.5
+anim_speed = 100.0
 
 [node name="TheGardens" instance=ExtResource( 1 )]
 display_name = "The Gardens"
@@ -190,5 +220,9 @@ unlock_text = "Inside you find a monocle!"
 
 [node name="TreeTops" parent="." index="6"]
 tile_data = PoolIntArray( -131095, 11, 0, -131093, 11, 0, -131091, 11, 0, -131089, 11, 0, -131087, 11, 0, -131085, 11, 0, -131083, 11, 0, -131081, 11, 0, -131079, 11, 0, -131077, 11, 0, -131075, 11, 0, -131073, 11, 0, -196607, 11, 0, -196605, 11, 0, -196603, 11, 0, -196601, 11, 0, -196599, 11, 0, -196597, 11, 0, -196595, 11, 0, -196593, 11, 0, -196591, 11, 0, -196589, 11, 0, -196587, 11, 0, -196585, 11, 0, -196583, 11, 0, -196581, 11, 0, -196579, 11, 0, -65560, 11, 0, -65558, 11, 0, -65556, 11, 0, -65554, 11, 0, -65552, 11, 0, -65550, 11, 0, -65548, 11, 0, -65546, 11, 0, -65544, 11, 0, -65542, 11, 0, -65540, 11, 0, -65538, 11, 0, -131072, 11, 0, -131070, 11, 0, -131068, 11, 0, -131066, 11, 0, -131064, 11, 0, -131062, 11, 0, -131060, 11, 0, -131058, 11, 0, -131056, 11, 0, -131054, 11, 0, -131052, 11, 0, -131050, 11, 0, -131048, 11, 0, -131046, 11, 0, -131044, 11, 0, -25, 11, 0, -23, 11, 0, -65509, 11, 0, -65507, 11, 0, 65512, 11, 0, 28, 11, 0, 131047, 11, 0, 131049, 11, 0, 65563, 11, 0, 65565, 11, 0, 196584, 11, 0, 131100, 11, 0, 262119, 11, 0, 262121, 11, 0, 196635, 11, 0, 196637, 11, 0, 327656, 11, 0, 393191, 11, 0, 393193, 11, 0, 458728, 11, 0, 524263, 11, 0, 524265, 11, 0, 589800, 11, 0, 524315, 11, 0, 524317, 11, 0, 655335, 11, 0, 655337, 11, 0, 589852, 11, 0, 720872, 11, 0, 655387, 11, 0, 655389, 11, 0, 786407, 11, 0, 786409, 11, 0, 720924, 11, 0, 851944, 11, 0, 786459, 11, 0, 786461, 11, 0, 917479, 11, 0, 917481, 11, 0, 851996, 11, 0, 983016, 11, 0, 983018, 11, 0, 917531, 11, 0, 917533, 11, 0, 1048551, 11, 0, 1048553, 11, 0, 1048555, 11, 0, 1048556, 11, 0, 1048558, 11, 0, 1048560, 11, 0, 1048562, 11, 0, 1048564, 11, 0, 1048566, 11, 0, 1048568, 11, 0, 1048570, 11, 0, 1048572, 11, 0, 1048574, 11, 0, 983040, 11, 0, 983042, 11, 0, 983044, 11, 0, 983046, 11, 0, 983048, 11, 0, 983050, 11, 0, 983052, 11, 0, 983054, 11, 0, 983056, 11, 0, 983058, 11, 0, 983060, 11, 0, 983062, 11, 0, 983064, 11, 0, 983066, 11, 0, 983068, 11, 0, 1114088, 11, 0, 1114090, 11, 0, 1114091, 11, 0, 1114093, 11, 0, 1114095, 11, 0, 1114097, 11, 0, 1114099, 11, 0, 1114101, 11, 0, 1114103, 11, 0, 1114105, 11, 0, 1114107, 11, 0, 1114109, 11, 0, 1114111, 11, 0, 1048577, 11, 0, 1048579, 11, 0, 1048581, 11, 0, 1048583, 11, 0, 1048585, 11, 0, 1048587, 11, 0, 1048589, 11, 0, 1048591, 11, 0, 1048593, 11, 0, 1048595, 11, 0, 1048597, 11, 0, 1048599, 11, 0, 1048601, 11, 0, 1048603, 11, 0, 1048605, 11, 0 )
+
+[node name="Butterflies" parent="." index="7" instance=ExtResource( 11 )]
+position = Vector2( 40, 112 )
+process_material = SubResource( 14 )
 
 [editable path="YSort/Player"]

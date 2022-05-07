@@ -182,6 +182,6 @@ anims/fade_out = SubResource( 4 )
 
 [node name="PauseMenu" parent="Overlay" instance=ExtResource( 7 )]
 visible = false
-color = Color( 0, 0, 0, 0.454902 )
 
 [node name="MainMenu" parent="Overlay" instance=ExtResource( 6 )]
+visible = false
