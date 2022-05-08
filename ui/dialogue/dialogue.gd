@@ -12,7 +12,7 @@ var text_animate_timer: float = 0.0
 onready var label: Label = $Label
 
 
-func _unhandled_input(event) -> void:
+func _input(event) -> void:
 	if not visible:
 		return
 	

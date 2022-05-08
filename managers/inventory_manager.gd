@@ -41,3 +41,8 @@ func remove_all_of_item(item_name: String) -> void:
 func get_amount_of_item(item_name: String) -> int:
 	assert(ItemManager.ITEMS.has(item_name))
 	return items.get(item_name, 0)
+
+
+func reset_inventory() -> void:
+	items = {}
+	num_carrots = 0

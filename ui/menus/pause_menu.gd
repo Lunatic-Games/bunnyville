@@ -41,4 +41,4 @@ func _on_CancelQuitButton_pressed():
 
 func _on_ConfirmQuitButton_pressed():
 	get_tree().paused = false
-	var _ret = get_tree().change_scene("res://game/game.tscn")
+	Utility.restart_game()
