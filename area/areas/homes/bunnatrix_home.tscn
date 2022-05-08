@@ -42,7 +42,7 @@ position = Vector2( 304, 64 )
 
 [node name="Fireplace" parent="YSort/Objects" index="0" instance=ExtResource( 3 )]
 position = Vector2( 256, 40 )
-frame = 0
+frame = 2
 
 [node name="Table" parent="YSort/Objects" index="1" instance=ExtResource( 5 )]
 position = Vector2( 213, 119 )

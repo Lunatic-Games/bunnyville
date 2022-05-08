@@ -8,21 +8,21 @@
 [ext_resource path="res://_assets/art/decorations/fireplace.png" type="Texture" id=6]
 [ext_resource path="res://decorations/table.tscn" type="PackedScene" id=7]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 26, 16 )
+region = Rect2( 0, 0, 27, 17 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 6 )
-region = Rect2( 26, 0, 26, 16 )
+region = Rect2( 27, 0, 27, 17 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 6 )
-region = Rect2( 52, 0, 26, 16 )
+region = Rect2( 54, 0, 27, 17 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -66,16 +66,16 @@ scale = Vector2( -1, 1 )
 [node name="JohnBunz" parent="YSort" index="2" instance=ExtResource( 4 )]
 position = Vector2( 300, 96 )
 
-[node name="Fireplace" parent="YSort/Objects" index="0" instance=ExtResource( 5 )]
-position = Vector2( 256, 40 )
-frames = SubResource( 4 )
-frame = 0
-
-[node name="Table" parent="YSort/Objects" index="1" instance=ExtResource( 7 )]
+[node name="Table" parent="YSort/Objects" index="0" instance=ExtResource( 7 )]
 position = Vector2( 213, 72 )
 
-[node name="Table2" parent="YSort/Objects" index="2" instance=ExtResource( 7 )]
+[node name="Table2" parent="YSort/Objects" index="1" instance=ExtResource( 7 )]
 position = Vector2( 298, 108 )
+
+[node name="Fireplace" type="AnimatedSprite" parent="YSort/Objects" index="2" instance=ExtResource( 5 )]
+position = Vector2( 256, 40 )
+frames = SubResource( 4 )
+playing = true
 
 [editable path="YSort/Player"]
 [editable path="YSort/DrewBunz"]

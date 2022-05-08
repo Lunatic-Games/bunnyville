@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://interactable/cattail/cattail.tscn" type="PackedScene" id=9]
 [ext_resource path="res://area/particles/butterflies.tscn" type="PackedScene" id=10]
 [ext_resource path="res://decorations/purple_flower/yellow_flower.tscn" type="PackedScene" id=11]
+[ext_resource path="res://interactable/garden_pot/garden_pot.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -230,19 +231,20 @@ position = Vector2( 240, 16 )
 exit_name = "PondExit"
 
 [node name="HomeExit" type="Position2D" parent="Exits" index="0"]
-position = Vector2( 496, 200 )
+position = Vector2( 466, 200 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 240, 56 )
 
 [node name="Camera2D" parent="YSort/Player" index="0"]
+current = false
 limit_left = -112
 limit_top = 0
 limit_right = 592
 limit_bottom = 480
 
 [node name="BunsyHome" parent="YSort/Buildings" index="0" instance=ExtResource( 3 )]
-position = Vector2( 496, 176 )
+position = Vector2( 466, 176 )
 inside = "BUNSY_HOME"
 
 [node name="Cattail" parent="YSort/Objects" index="0" instance=ExtResource( 9 )]
@@ -265,7 +267,7 @@ position = Vector2( 344, 296 )
 texture = ExtResource( 6 )
 
 [node name="Sign" parent="YSort/Objects" index="6" instance=ExtResource( 5 )]
-position = Vector2( 440, 192 )
+position = Vector2( 408, 184 )
 text = "Home of Old Man Bunsy"
 
 [node name="YellowFlower" parent="YSort/Objects" index="7" instance=ExtResource( 11 )]
@@ -306,6 +308,9 @@ position = Vector2( 112, 272 )
 
 [node name="YellowFlower13" parent="YSort/Objects" index="19" instance=ExtResource( 11 )]
 position = Vector2( 128, 240 )
+
+[node name="GardenPot5" parent="YSort/Objects" index="20" instance=ExtResource( 12 )]
+position = Vector2( 528, 184 )
 
 [node name="OldManBunsy" parent="YSort/NPCs" index="0" instance=ExtResource( 4 )]
 position = Vector2( 376, 296 )

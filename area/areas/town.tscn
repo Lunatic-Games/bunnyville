@@ -5,7 +5,7 @@
 [ext_resource path="res://interactable/building/building.tscn" type="PackedScene" id=3]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interactable/garden_pot/garden_pot.tscn" type="PackedScene" id=5]
-[ext_resource path="res://interactable/chest/chest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://_assets/art/decorations/fountain.png" type="Texture" id=6]
 [ext_resource path="res://area/particles/butterflies.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -180,20 +180,18 @@ text = "Home of Sir Bunselot"
 [node name="GardenPot" parent="YSort/Objects" index="4" instance=ExtResource( 5 )]
 position = Vector2( 589, 256 )
 
-[node name="Chest" parent="YSort/Objects" index="5" instance=ExtResource( 6 )]
-position = Vector2( 336, 279 )
-item_contained = "BLUEPRINTS"
-unlock_text = "Inside you find a set of blueprints!"
+[node name="GardenPot2" parent="YSort/Objects" index="5" instance=ExtResource( 5 )]
+position = Vector2( 184, 256 )
 
-[node name="Chest2" parent="YSort/Objects" index="6" instance=ExtResource( 6 )]
-position = Vector2( 421, 277 )
-item_contained = "HAMMER"
-unlock_text = "Inside you find a hammer!"
+[node name="GardenPot3" parent="YSort/Objects" index="6" instance=ExtResource( 5 )]
+position = Vector2( 184, 448 )
 
-[node name="Chest3" parent="YSort/Objects" index="7" instance=ExtResource( 6 )]
-position = Vector2( 431, 336 )
-item_contained = "MONOCLE"
-unlock_text = "Inside you find a monocle!"
+[node name="GardenPot4" parent="YSort/Objects" index="7" instance=ExtResource( 5 )]
+position = Vector2( 592, 448 )
+
+[node name="Sprite" type="Sprite" parent="YSort/Objects" index="8"]
+position = Vector2( 384, 296 )
+texture = ExtResource( 6 )
 
 [node name="TreeTops" parent="." index="6"]
 tile_data = PoolIntArray( -1, 11, 0, -65535, 11, 0, -65533, 11, 0, -65531, 11, 0, -65529, 11, 0, -65527, 11, 0, -65525, 11, 0, -65523, 11, 0, -65521, 11, 0, -65519, 11, 0, -65517, 11, 0, -65510, 11, 0, -65508, 11, 0, -65506, 11, 0, -65504, 11, 0, -65502, 11, 0, -65500, 11, 0, -65498, 11, 0, -65496, 11, 0, -65494, 11, 0, -65492, 11, 0, -65490, 11, 0, 65534, 11, 0, 0, 11, 0, 2, 11, 0, 4, 11, 0, 6, 11, 0, 8, 11, 0, 10, 11, 0, 12, 11, 0, 14, 11, 0, 16, 11, 0, 18, 11, 0, 20, 11, 0, 25, 11, 0, 27, 11, 0, 29, 11, 0, 31, 11, 0, 33, 11, 0, 35, 11, 0, 37, 11, 0, 39, 11, 0, 41, 11, 0, 43, 11, 0, 45, 11, 0, 47, 11, 0, 131071, 11, 0, 65582, 11, 0, 196606, 11, 0, 131072, 11, 0, 131117, 11, 0, 131119, 11, 0, 262143, 11, 0, 196654, 11, 0, 327678, 11, 0, 262144, 11, 0, 262189, 11, 0, 262191, 11, 0, 393215, 11, 0, 327726, 11, 0, 458750, 11, 0, 393216, 11, 0, 393261, 11, 0, 393263, 11, 0, 524287, 11, 0, 458798, 11, 0, 589822, 11, 0, 524288, 11, 0, 524333, 11, 0, 524335, 11, 0, 655359, 11, 0, 589870, 11, 0, 720894, 11, 0, 655360, 11, 0, 655405, 11, 0, 655407, 11, 0, 786431, 11, 0, 720942, 11, 0, 851966, 11, 0, 786432, 11, 0, 786477, 11, 0, 786479, 11, 0, 917503, 11, 0, 852014, 11, 0, 983038, 11, 0, 917504, 11, 0, 917549, 11, 0, 917551, 11, 0, 1310718, 11, 0, 1245184, 11, 0, 1245229, 11, 0, 1245231, 11, 0, 1376255, 11, 0, 1310766, 11, 0, 1441790, 11, 0, 1376256, 11, 0, 1376301, 11, 0, 1376303, 11, 0, 1507327, 11, 0, 1441838, 11, 0, 1572862, 11, 0, 1507328, 11, 0, 1507373, 11, 0, 1507375, 11, 0, 1638399, 11, 0, 1572910, 11, 0, 1703934, 11, 0, 1638400, 11, 0, 1638445, 11, 0, 1638447, 11, 0, 1769471, 11, 0, 1703982, 11, 0, 1835006, 11, 0, 1769472, 11, 0, 1769517, 11, 0, 1769519, 11, 0, 1900543, 11, 0, 1835054, 11, 0, 1966078, 11, 0, 1900544, 11, 0, 1900589, 11, 0, 1900591, 11, 0, 2031615, 11, 0, 1966126, 11, 0, 2097150, 11, 0, 2031616, 11, 0, 2031661, 11, 0, 2031663, 11, 0, 2162687, 11, 0, 2097198, 11, 0, 2228222, 11, 0, 2162688, 11, 0, 2162733, 11, 0, 2162735, 11, 0, 2293759, 11, 0, 2228270, 11, 0, 2359294, 11, 0, 2293760, 11, 0, 2293762, 11, 0, 2293764, 11, 0, 2293766, 11, 0, 2293768, 11, 0, 2293770, 11, 0, 2293772, 11, 0, 2293774, 11, 0, 2293776, 11, 0, 2293778, 11, 0, 2293780, 11, 0, 2293785, 11, 0, 2293787, 11, 0, 2293789, 11, 0, 2293791, 11, 0, 2293793, 11, 0, 2293795, 11, 0, 2293797, 11, 0, 2293799, 11, 0, 2293801, 11, 0, 2293803, 11, 0, 2293805, 11, 0, 2293807, 11, 0, 2424831, 11, 0, 2359297, 11, 0, 2359299, 11, 0, 2359301, 11, 0, 2359303, 11, 0, 2359305, 11, 0, 2359307, 11, 0, 2359309, 11, 0, 2359311, 11, 0, 2359313, 11, 0, 2359315, 11, 0, 2359322, 11, 0, 2359324, 11, 0, 2359326, 11, 0, 2359328, 11, 0, 2359330, 11, 0, 2359332, 11, 0, 2359334, 11, 0, 2359336, 11, 0, 2359338, 11, 0, 2359340, 11, 0, 2359342, 11, 0 )

@@ -6,21 +6,21 @@
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://decorations/table.tscn" type="PackedScene" id=5]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 26, 16 )
+region = Rect2( 0, 0, 27, 17 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 3 )
-region = Rect2( 26, 0, 26, 16 )
+region = Rect2( 27, 0, 27, 17 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 3 )
-region = Rect2( 52, 0, 26, 16 )
+region = Rect2( 54, 0, 27, 17 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -56,12 +56,12 @@ limit_top = -46
 limit_right = 496
 limit_bottom = 224
 
-[node name="Fireplace" parent="YSort/Objects" index="0" instance=ExtResource( 2 )]
+[node name="Table" parent="YSort/Objects" index="0" instance=ExtResource( 5 )]
+position = Vector2( 213, 96 )
+
+[node name="Fireplace" type="AnimatedSprite" parent="YSort/Objects" index="1" instance=ExtResource( 2 )]
 position = Vector2( 256, 40 )
 frames = SubResource( 4 )
-frame = 2
-
-[node name="Table" parent="YSort/Objects" index="1" instance=ExtResource( 5 )]
-position = Vector2( 213, 96 )
+playing = true
 
 [editable path="YSort/Player"]
