@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://area/areas/homes/bunnington_home.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game/game.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ui/inventory/inventory_hud.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/menus/main_menu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/menus/pause_menu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://_assets/music/a_very_bunny_town_2.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=5]
 size = 12
@@ -137,6 +138,13 @@ script = ExtResource( 2 )
 
 [node name="BunningtonHome" parent="." instance=ExtResource( 1 )]
 is_intro = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -20.0
+autoplay = true
+bus = "Music"
 
 [node name="Overlay" type="CanvasLayer" parent="."]
 

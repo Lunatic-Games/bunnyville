@@ -6,4 +6,5 @@ onready var item_texture = $ItemPanel/ItemTexture
 
 func display(text_pages: Array, animate_text: bool = true, portrait: Texture = null) -> void:
 	item_texture.texture = portrait
+	$SFXPlayer.play()
 	.display(text_pages, animate_text)

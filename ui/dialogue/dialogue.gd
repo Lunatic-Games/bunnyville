@@ -3,11 +3,17 @@ extends TextureRect
 
 signal finished
 
+export (bool) var dialogue_sfx = false
+
 const TEXT_ANIMATE_TIME = 0.1
+const DIALOGUE_CLIPS = [preload("res://_assets/sfx/talk.wav"),
+	preload("res://_assets/sfx/talk_2.wav"),
+	preload("res://_assets/sfx/talk_3.wav")]
 
 var pages: Array = []
 var page_i: int = 0
 var text_animate_timer: float = 0.0
+var dialogue_clip_i = 0
 
 onready var label: Label = $Label
 
@@ -33,6 +39,12 @@ func _process(delta):
 		text_animate_timer -= delta
 		if label.visible_characters < label.text.length():
 			label.visible_characters += 1
+			if not $SFXPlayer.playing and dialogue_sfx:
+				dialogue_clip_i += 1
+				if dialogue_clip_i >= DIALOGUE_CLIPS.size():
+					dialogue_clip_i = 0
+				$SFXPlayer.stream = DIALOGUE_CLIPS[dialogue_clip_i]
+				$SFXPlayer.play()
 
 
 func display(text_pages: Array, animate_text: bool = true) -> void:
