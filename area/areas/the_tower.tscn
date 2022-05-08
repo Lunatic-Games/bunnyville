@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
@@ -27,6 +27,9 @@ extents = Vector2( 62, 29 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 28, 68 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 28, 66.5 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 96, 56.5 )
@@ -87,8 +90,8 @@ position = Vector2( 532, 220 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TreeBases/Collider" index="5"]
-position = Vector2( 536, 48 )
-shape = SubResource( 8 )
+position = Vector2( 536, 46.5 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TreeBases/Collider" index="6"]
 position = Vector2( 632, 56.5 )

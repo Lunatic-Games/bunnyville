@@ -32,10 +32,10 @@ animations = [ {
 display_name = "Home of the Bunz Brothers"
 
 [node name="Background" type="ColorRect" parent="." index="0"]
-margin_left = 16.0
-margin_top = -48.0
-margin_right = 496.0
-margin_bottom = 232.0
+margin_left = 5.0
+margin_top = -55.0
+margin_right = 509.0
+margin_bottom = 234.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Ground" parent="." index="1"]
@@ -66,11 +66,10 @@ scale = Vector2( -1, 1 )
 [node name="JohnBunz" parent="YSort" index="2" instance=ExtResource( 4 )]
 position = Vector2( 300, 96 )
 
-[node name="Fireplace" type="AnimatedSprite" parent="YSort/Objects" index="0" instance=ExtResource( 5 )]
+[node name="Fireplace" parent="YSort/Objects" index="0" instance=ExtResource( 5 )]
 position = Vector2( 256, 40 )
 frames = SubResource( 4 )
-frame = 1
-playing = true
+frame = 0
 
 [node name="Table" parent="YSort/Objects" index="1" instance=ExtResource( 7 )]
 position = Vector2( 213, 72 )

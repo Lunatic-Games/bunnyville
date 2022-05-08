@@ -30,9 +30,9 @@ animations = [ {
 display_name = "Home of Old Man Bunsy"
 
 [node name="Background" type="ColorRect" parent="." index="0"]
-margin_left = 16.0
-margin_top = -48.0
-margin_right = 496.0
+margin_left = 8.0
+margin_top = -55.0
+margin_right = 504.0
 margin_bottom = 232.0
 color = Color( 0, 0, 0, 1 )
 
@@ -56,11 +56,10 @@ limit_top = -46
 limit_right = 496
 limit_bottom = 224
 
-[node name="Fireplace" type="AnimatedSprite" parent="YSort/Objects" index="0" instance=ExtResource( 2 )]
+[node name="Fireplace" parent="YSort/Objects" index="0" instance=ExtResource( 2 )]
 position = Vector2( 256, 40 )
 frames = SubResource( 4 )
-frame = 1
-playing = true
+frame = 2
 
 [node name="Table" parent="YSort/Objects" index="1" instance=ExtResource( 5 )]
 position = Vector2( 213, 96 )
