@@ -144,7 +144,6 @@ pause_mode = 2
 stream = ExtResource( 8 )
 volume_db = -20.0
 autoplay = true
-bus = "Music"
 
 [node name="Overlay" type="CanvasLayer" parent="."]
 

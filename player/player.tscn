@@ -127,54 +127,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 100.0, 100.0, 50.0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Shadow:scale")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.7, 0.9 ), Vector2( 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Shadow:position")
-tracks/4/interp = 2
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Shadow:self_modulate")
-tracks/5/interp = 2
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.843137 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Sprite:animation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ "jump_start", "jump", "jump_start", "idle" ]
-}
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 240, 135 )
