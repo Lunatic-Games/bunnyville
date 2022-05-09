@@ -6,7 +6,7 @@
 
 [node name="KateBunnington" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-title = "Kate Bunnington"
+title = "Ms. Bunnington"
 
 [node name="Sprite" parent="." index="2"]
 texture = ExtResource( 2 )

@@ -50,3 +50,10 @@ func mark_cattail_harvested(cattail_name: String) -> void:
 func count_progressions(progression: String) -> int:
 	assert(PROGRESSIONS.has(progression))
 	return achieved.count(progression)
+
+
+func reset_progress() -> void:
+	achieved = []
+	chests_opened = []
+	flowers_planted = []
+	cattails_harvested = []

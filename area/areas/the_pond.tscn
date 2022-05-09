@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://area/passage/passage.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://_assets/art/tilesets/water.png" type="Texture" id=7]
 [ext_resource path="res://_assets/art/decorations/fish.png" type="Texture" id=8]
 [ext_resource path="res://interactable/cattail/cattail.tscn" type="PackedScene" id=9]
+[ext_resource path="res://area/particles/butterflies.tscn" type="PackedScene" id=10]
+[ext_resource path="res://decorations/purple_flower/yellow_flower.tscn" type="PackedScene" id=11]
+[ext_resource path="res://interactable/garden_pot/garden_pot.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -224,52 +227,98 @@ position = Vector2( 432, 16 )
 shape = SubResource( 1 )
 
 [node name="Passage" parent="Passages" index="0" instance=ExtResource( 2 )]
-position = Vector2( 240, 32 )
+position = Vector2( 240, 16 )
 exit_name = "PondExit"
 
 [node name="HomeExit" type="Position2D" parent="Exits" index="0"]
-position = Vector2( 496, 200 )
+position = Vector2( 466, 200 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 240, 56 )
 
 [node name="Camera2D" parent="YSort/Player" index="0"]
+current = false
 limit_left = -112
 limit_top = 0
 limit_right = 592
 limit_bottom = 480
 
-[node name="BunsyHome" parent="YSort" index="1" instance=ExtResource( 3 )]
-position = Vector2( 496, 176 )
+[node name="BunsyHome" parent="YSort/Buildings" index="0" instance=ExtResource( 3 )]
+position = Vector2( 466, 176 )
 inside = "BUNSY_HOME"
 
-[node name="OldManBunsy" parent="YSort" index="2" instance=ExtResource( 4 )]
-position = Vector2( 376, 296 )
+[node name="Cattail" parent="YSort/Objects" index="0" instance=ExtResource( 9 )]
+position = Vector2( 144, 208 )
 
-[node name="Sign" parent="YSort" index="3" instance=ExtResource( 5 )]
-position = Vector2( 440, 192 )
-text = "Home of Old Man Bunsy"
+[node name="Cattail2" parent="YSort/Objects" index="1" instance=ExtResource( 9 )]
+position = Vector2( 336, 216 )
 
-[node name="FishingRod" type="Sprite" parent="YSort" index="4"]
+[node name="Cattail3" parent="YSort/Objects" index="2" instance=ExtResource( 9 )]
+position = Vector2( 128, 360 )
+
+[node name="Cattail4" parent="YSort/Objects" index="3" instance=ExtResource( 9 )]
+position = Vector2( 248, 416 )
+
+[node name="Cattail5" parent="YSort/Objects" index="4" instance=ExtResource( 9 )]
+position = Vector2( 352, 360 )
+
+[node name="FishingRod" type="Sprite" parent="YSort/Objects" index="5"]
 position = Vector2( 344, 296 )
 texture = ExtResource( 6 )
 
-[node name="Cattail" parent="YSort" index="5" instance=ExtResource( 9 )]
-position = Vector2( 144, 208 )
+[node name="Sign" parent="YSort/Objects" index="6" instance=ExtResource( 5 )]
+position = Vector2( 408, 184 )
+text = "Home of Old Man Bunsy"
 
-[node name="Cattail2" parent="YSort" index="6" instance=ExtResource( 9 )]
-position = Vector2( 336, 216 )
+[node name="YellowFlower" parent="YSort/Objects" index="7" instance=ExtResource( 11 )]
+position = Vector2( 192, 184 )
 
-[node name="Cattail3" parent="YSort" index="7" instance=ExtResource( 9 )]
-position = Vector2( 128, 360 )
+[node name="YellowFlower2" parent="YSort/Objects" index="8" instance=ExtResource( 11 )]
+position = Vector2( 200, 184 )
 
-[node name="Cattail4" parent="YSort" index="8" instance=ExtResource( 9 )]
-position = Vector2( 248, 416 )
+[node name="YellowFlower3" parent="YSort/Objects" index="9" instance=ExtResource( 11 )]
+position = Vector2( 312, 192 )
 
-[node name="Cattail5" parent="YSort" index="9" instance=ExtResource( 9 )]
-position = Vector2( 352, 360 )
+[node name="YellowFlower4" parent="YSort/Objects" index="10" instance=ExtResource( 11 )]
+position = Vector2( 352, 248 )
+
+[node name="YellowFlower5" parent="YSort/Objects" index="11" instance=ExtResource( 11 )]
+position = Vector2( 360, 264 )
+
+[node name="YellowFlower6" parent="YSort/Objects" index="12" instance=ExtResource( 11 )]
+position = Vector2( 360, 336 )
+
+[node name="YellowFlower7" parent="YSort/Objects" index="13" instance=ExtResource( 11 )]
+position = Vector2( 320, 400 )
+
+[node name="YellowFlower8" parent="YSort/Objects" index="14" instance=ExtResource( 11 )]
+position = Vector2( 304, 416 )
+
+[node name="YellowFlower9" parent="YSort/Objects" index="15" instance=ExtResource( 11 )]
+position = Vector2( 184, 416 )
+
+[node name="YellowFlower10" parent="YSort/Objects" index="16" instance=ExtResource( 11 )]
+position = Vector2( 144, 384 )
+
+[node name="YellowFlower11" parent="YSort/Objects" index="17" instance=ExtResource( 11 )]
+position = Vector2( 112, 328 )
+
+[node name="YellowFlower12" parent="YSort/Objects" index="18" instance=ExtResource( 11 )]
+position = Vector2( 112, 272 )
+
+[node name="YellowFlower13" parent="YSort/Objects" index="19" instance=ExtResource( 11 )]
+position = Vector2( 128, 240 )
+
+[node name="GardenPot5" parent="YSort/Objects" index="20" instance=ExtResource( 12 )]
+position = Vector2( 528, 184 )
+
+[node name="OldManBunsy" parent="YSort/NPCs" index="0" instance=ExtResource( 4 )]
+position = Vector2( 376, 296 )
 
 [node name="TreeTops" parent="." index="7"]
 tile_data = PoolIntArray( -8, 11, 0, -6, 11, 0, -4, 11, 0, -2, 11, 0, -65536, 11, 0, -65534, 11, 0, -65532, 11, 0, -65530, 11, 0, -65528, 11, 0, -65526, 11, 0, -65519, 11, 0, -65517, 11, 0, -65515, 11, 0, -65513, 11, 0, -65511, 11, 0, -65509, 11, 0, -65507, 11, 0, -65505, 11, 0, -65503, 11, 0, -65501, 11, 0, 65527, 11, 0, 65529, 11, 0, 65531, 11, 0, 65533, 11, 0, 65535, 11, 0, 1, 11, 0, 3, 11, 0, 5, 11, 0, 7, 11, 0, 9, 11, 0, 11, 11, 0, 16, 11, 0, 18, 11, 0, 20, 11, 0, 22, 11, 0, 24, 11, 0, 26, 11, 0, 28, 11, 0, 30, 11, 0, 32, 11, 0, 34, 11, 0, 36, 11, 0, 131063, 11, 0, 131065, 11, 0, 65571, 11, 0, 196600, 11, 0, 131106, 11, 0, 131108, 11, 0, 262135, 11, 0, 262137, 11, 0, 196643, 11, 0, 327672, 11, 0, 262178, 11, 0, 262180, 11, 0, 393207, 11, 0, 393209, 11, 0, 327715, 11, 0, 458744, 11, 0, 393250, 11, 0, 393252, 11, 0, 524279, 11, 0, 524281, 11, 0, 458787, 11, 0, 589816, 11, 0, 524322, 11, 0, 524324, 11, 0, 655351, 11, 0, 655353, 11, 0, 589859, 11, 0, 720888, 11, 0, 655394, 11, 0, 655396, 11, 0, 786423, 11, 0, 786425, 11, 0, 720931, 11, 0, 851960, 11, 0, 786466, 11, 0, 786468, 11, 0, 917495, 11, 0, 917497, 11, 0, 852003, 11, 0, 983032, 11, 0, 917538, 11, 0, 917540, 11, 0, 1048567, 11, 0, 1048569, 11, 0, 983075, 11, 0, 1114104, 11, 0, 1048610, 11, 0, 1048612, 11, 0, 1179639, 11, 0, 1179641, 11, 0, 1114147, 11, 0, 1245176, 11, 0, 1179682, 11, 0, 1179684, 11, 0, 1310711, 11, 0, 1310713, 11, 0, 1245219, 11, 0, 1376248, 11, 0, 1310754, 11, 0, 1310756, 11, 0, 1441783, 11, 0, 1441785, 11, 0, 1376291, 11, 0, 1507320, 11, 0, 1441826, 11, 0, 1441828, 11, 0, 1572855, 11, 0, 1572857, 11, 0, 1507363, 11, 0, 1638392, 11, 0, 1572898, 11, 0, 1572900, 11, 0, 1703927, 11, 0, 1703929, 11, 0, 1638435, 11, 0, 1769464, 11, 0, 1703970, 11, 0, 1703972, 11, 0, 1834999, 11, 0, 1835001, 11, 0, 1769507, 11, 0, 1900536, 11, 0, 1900538, 11, 0, 1900540, 11, 0, 1900542, 11, 0, 1835008, 11, 0, 1835010, 11, 0, 1835012, 11, 0, 1835014, 11, 0, 1835016, 11, 0, 1835018, 11, 0, 1835020, 11, 0, 1835022, 11, 0, 1835024, 11, 0, 1835026, 11, 0, 1835028, 11, 0, 1835030, 11, 0, 1835032, 11, 0, 1835034, 11, 0, 1835036, 11, 0, 1835038, 11, 0, 1835040, 11, 0, 1835042, 11, 0, 1835044, 11, 0, 1966071, 11, 0, 1966073, 11, 0, 1966075, 11, 0, 1966077, 11, 0, 1966079, 11, 0, 1900545, 11, 0, 1900547, 11, 0, 1900549, 11, 0, 1900551, 11, 0, 1900553, 11, 0, 1900555, 11, 0, 1900557, 11, 0, 1900559, 11, 0, 1900561, 11, 0, 1900563, 11, 0, 1900565, 11, 0, 1900567, 11, 0, 1900569, 11, 0, 1900571, 11, 0, 1900573, 11, 0, 1900575, 11, 0, 1900577, 11, 0, 1900579, 11, 0 )
+
+[node name="Butterflies" parent="." index="8" instance=ExtResource( 10 )]
+position = Vector2( 248, 264 )
 
 [editable path="YSort/Player"]

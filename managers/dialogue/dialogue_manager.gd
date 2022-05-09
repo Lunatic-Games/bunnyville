@@ -2,6 +2,7 @@ extends CanvasLayer
 
 
 signal open_toggled(is_open)
+signal finished
 
 enum DIALOGUE_TYPE {FULL, PORTRAIT, SMALL, ITEM}
 
@@ -48,3 +49,4 @@ func _on_dialogue_finished() -> void:
 	else:
 		is_open = false
 		emit_signal("open_toggled", false)
+		emit_signal("finished")

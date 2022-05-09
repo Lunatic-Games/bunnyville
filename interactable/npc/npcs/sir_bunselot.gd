@@ -26,7 +26,7 @@ func interact():
 	
 	elif ProgressManager.has_progression("SWORD_GIVEN_TO_SIR_BUNSELOT"):
 		if by_tower:
-			display_dialogue(["I'm not sure how to get here down without some rope..."])
+			display_dialogue(["I'm not sure how to get her down without some rope..."])
 		else:
 			display_dialogue(["I'll meet you by the tower!"])
 			

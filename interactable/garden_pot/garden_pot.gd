@@ -14,6 +14,7 @@ func interact():
 		monitoring = false
 		$Sprite.hide()
 		$SpriteWithFlower.show()
+		DialogueManager.display_dialogue(DialogueManager.DIALOGUE_TYPE.SMALL, ["You place the flower in the pot."], false)
 		InventoryManager.remove_item("FLOWERS")
 		ProgressManager.progression_achieved("FLOWER_PLANTED")
 		ProgressManager.mark_flower_planted(name)

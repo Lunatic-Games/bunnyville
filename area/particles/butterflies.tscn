@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://_assets/art/particles/butterfly.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.0631229, 0.923588, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="Curve" id=12]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0401235, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.950617, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 12 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 2
+emission_box_extents = Vector3( 384, 304, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 13 )
+color = Color( 0.996078, 0.560784, 1, 1 )
+color_ramp = SubResource( 11 )
+hue_variation = 0.45
+hue_variation_random = 0.5
+anim_speed = 100.0
+
+[node name="Butterflies" type="Particles2D"]
+material = SubResource( 8 )
+position = Vector2( 383, 304 )
+amount = 32
+lifetime = 60.0
+preprocess = 60.0
+visibility_rect = Rect2( -768, -304, 1536, 608 )
+process_material = SubResource( 9 )
+texture = ExtResource( 1 )

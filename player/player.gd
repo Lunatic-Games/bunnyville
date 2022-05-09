@@ -4,6 +4,7 @@ class_name Player
 export (float) var current_speed = 0.0
 
 onready var camera = $Camera2D
+onready var collision_shape = $CollisionShape2D
 
 
 func _physics_process(_delta: float) -> void:
@@ -40,3 +41,8 @@ func set_facing_direction(right_facing: bool = true):
 
 func is_facing_right() -> bool:
 	return sign($Sprite.scale.x) < 0.0
+
+
+func set_paused(is_paused):
+	set_physics_process(not is_paused)
+	collision_shape.disabled = is_paused

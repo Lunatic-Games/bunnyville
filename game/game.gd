@@ -1,10 +1,20 @@
 extends Node2D
 
 
-onready var area: GameArea = $Town as GameArea
+onready var area: GameArea = $BunningtonHome as GameArea
 onready var transition_player: AnimationPlayer = $Overlay/Transition/AnimationPlayer
 onready var area_name: Label = $Overlay/AreaName
 onready var area_name_player: AnimationPlayer = $Overlay/AreaName/AnimationPlayer
+
+onready var pause_menu = $Overlay/PauseMenu
+onready var main_menu = $Overlay/MainMenu
+
+
+func _unhandled_input(event):
+	if event.is_action_pressed("pause"):
+		get_tree().set_input_as_handled()
+		get_tree().paused = true
+		pause_menu.show()
 
 
 func change_area(new_area: String, player_exit: String = "") -> void:
@@ -39,3 +49,8 @@ func change_area(new_area: String, player_exit: String = "") -> void:
 	transition_player.play("fade_out")
 	yield(transition_player, "animation_finished")
 	get_tree().paused = false
+
+
+func _on_MainMenu_visibility_changed():
+	if not main_menu.visible:
+		$BunningtonHome.wake_up_dialogue()

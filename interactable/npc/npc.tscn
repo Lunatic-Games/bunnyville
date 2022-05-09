@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_assets/art/npcs/bunnatrix.png" type="Texture" id=2]
 [ext_resource path="res://interactable/npc/npc.gd" type="Script" id=3]
+[ext_resource path="res://_assets/art/player/shadow.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 2 )
 
 [node name="NPC" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2( 0, -3.5 )
 
 [node name="Prompt" parent="." index="1"]
 margin_top = -36.0
@@ -17,6 +21,10 @@ margin_bottom = -22.0
 [node name="Sprite" type="Sprite" parent="." index="2"]
 position = Vector2( 0, -14 )
 texture = ExtResource( 2 )
+
+[node name="Shadow" type="Sprite" parent="Sprite" index="0"]
+position = Vector2( -1, 14 )
+texture = ExtResource( 4 )
 
 [node name="Collider" type="StaticBody2D" parent="." index="3"]
 
