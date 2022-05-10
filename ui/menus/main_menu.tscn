@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://_assets/fonts/04B_30__.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://ui/menus/main_menu.gd" type="Script" id=2]
@@ -14,6 +14,42 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=9]
 size = 14
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "float"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
 
 [node name="MainMenu" type="ColorRect"]
 pause_mode = 2
@@ -61,3 +97,26 @@ custom_fonts/font = SubResource( 9 )
 text = "Press Anything to Start"
 align = 1
 valign = 1
+
+[node name="MadeWithGodot" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -56.0
+margin_top = -246.0
+margin_right = 424.0
+margin_bottom = -204.0
+rect_min_size = Vector2( 480, 42 )
+rect_rotation = -16.1
+rect_pivot_offset = Vector2( 240, 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Made with Godot"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MadeWithGodot"]
+autoplay = "float"
+anims/RESET = SubResource( 13 )
+anims/float = SubResource( 12 )

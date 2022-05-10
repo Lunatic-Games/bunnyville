@@ -50,3 +50,12 @@ func _on_dialogue_finished() -> void:
 		is_open = false
 		emit_signal("open_toggled", false)
 		emit_signal("finished")
+
+
+func reset():
+	$FullDialogue.hide()
+	$PortraitDialogue.hide()
+	$SmallDialogue.hide()
+	$ItemDialogue.hide()
+	queued_dialogue = []
+	is_open = false

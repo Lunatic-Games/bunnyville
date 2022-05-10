@@ -64,7 +64,7 @@ custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
 custom_styles/disabled = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
-text = "Quit"
+text = "Restart"
 
 [node name="QuitConfirmation" type="VBoxContainer" parent="."]
 visible = false
@@ -78,7 +78,7 @@ margin_right = 480.0
 margin_bottom = 133.0
 custom_colors/font_color = Color( 0.701961, 0.72549, 0.819608, 1 )
 custom_fonts/font = SubResource( 14 )
-text = "Are you sure you want to quit?"
+text = "Are you sure you want to restart?"
 align = 1
 
 [node name="Buttons" type="HBoxContainer" parent="QuitConfirmation"]
@@ -103,7 +103,7 @@ margin_top = 0.0
 margin_right = 312.0
 margin_bottom = 18.0
 rect_min_size = Vector2( 62, 0 )
-text = "Quit"
+text = "Yes"
 
 [node name="SettingsMenu" parent="." instance=ExtResource( 3 )]
 visible = false
