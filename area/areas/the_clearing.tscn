@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://area/area.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interactable/statue/statue.tscn" type="PackedScene" id=2]
@@ -8,6 +8,15 @@
 [ext_resource path="res://_assets/art/npcs/bunnington_ghost.png" type="Texture" id=6]
 [ext_resource path="res://area/areas/the_clearing.gd" type="Script" id=7]
 [ext_resource path="res://_assets/fonts/04B_30__.TTF" type="DynamicFontData" id=8]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 120, 19.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 120, 21.75 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 24, 174.875 )
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -209,22 +218,28 @@ tile_data = PoolIntArray( -1, 10, 0, -65535, 10, 0, -65533, 10, 0, -65531, 10, 0
 [node name="StaticBody2D" type="StaticBody2D" parent="TreeBases" index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="0"]
-position = Vector2( 111, 19 )
+position = Vector2( 112, 28.5 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="1"]
-position = Vector2( 111.5, 391.25 )
+position = Vector2( 112, 376 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="2"]
-position = Vector2( 400, 392 )
+position = Vector2( 400, 376 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="3"]
-position = Vector2( 392, 17.5 )
+position = Vector2( 400, 26.25 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="4"]
-position = Vector2( 480, 208.75 )
+position = Vector2( 480, 225.125 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TreeBases/StaticBody2D" index="5"]
-position = Vector2( 16, 200 )
+position = Vector2( 16, 216 )
+shape = SubResource( 10 )
 
 [node name="Passage" parent="Passages" index="0" instance=ExtResource( 3 )]
 position = Vector2( 256, 352 )
@@ -250,6 +265,7 @@ limit_bottom = 368
 position = Vector2( 256, 205 )
 
 [node name="TreeTops" parent="." index="6"]
+visible = false
 tile_data = PoolIntArray( -1, 11, 0, -65535, 11, 0, -65533, 11, 0, -65531, 11, 0, -65529, 11, 0, -65527, 11, 0, -65525, 11, 0, -65518, 11, 0, -65516, 11, 0, -65514, 11, 0, -65512, 11, 0, -65510, 11, 0, -65508, 11, 0, -65506, 11, 0, 65534, 11, 0, 0, 11, 0, 2, 11, 0, 4, 11, 0, 6, 11, 0, 8, 11, 0, 10, 11, 0, 12, 11, 0, 17, 11, 0, 19, 11, 0, 21, 11, 0, 23, 11, 0, 25, 11, 0, 27, 11, 0, 29, 11, 0, 131071, 11, 0, 65564, 11, 0, 65566, 11, 0, 196606, 11, 0, 131072, 11, 0, 131101, 11, 0, 262143, 11, 0, 196636, 11, 0, 196638, 11, 0, 327678, 11, 0, 262144, 11, 0, 262173, 11, 0, 393215, 11, 0, 327708, 11, 0, 327710, 11, 0, 458750, 11, 0, 393216, 11, 0, 393245, 11, 0, 524287, 11, 0, 458780, 11, 0, 458782, 11, 0, 589822, 11, 0, 524288, 11, 0, 524317, 11, 0, 655359, 11, 0, 589852, 11, 0, 589854, 11, 0, 720894, 11, 0, 655360, 11, 0, 655389, 11, 0, 786431, 11, 0, 720924, 11, 0, 720926, 11, 0, 851966, 11, 0, 786432, 11, 0, 786461, 11, 0, 917503, 11, 0, 851996, 11, 0, 851998, 11, 0, 983038, 11, 0, 917504, 11, 0, 917533, 11, 0, 1048575, 11, 0, 983068, 11, 0, 983070, 11, 0, 1114110, 11, 0, 1048576, 11, 0, 1048605, 11, 0, 1179647, 11, 0, 1114140, 11, 0, 1114142, 11, 0, 1245182, 11, 0, 1179648, 11, 0, 1179677, 11, 0, 1310719, 11, 0, 1245212, 11, 0, 1245214, 11, 0, 1376254, 11, 0, 1310720, 11, 0, 1310749, 11, 0, 1441791, 11, 0, 1376257, 11, 0, 1376259, 11, 0, 1376261, 11, 0, 1376263, 11, 0, 1376265, 11, 0, 1376267, 11, 0, 1376274, 11, 0, 1376276, 11, 0, 1376278, 11, 0, 1376280, 11, 0, 1376282, 11, 0, 1376284, 11, 0, 1376286, 11, 0, 1507326, 11, 0, 1441792, 11, 0, 1441794, 11, 0, 1441796, 11, 0, 1441798, 11, 0, 1441800, 11, 0, 1441802, 11, 0, 1441804, 11, 0, 1441809, 11, 0, 1441811, 11, 0, 1441813, 11, 0, 1441815, 11, 0, 1441817, 11, 0, 1441819, 11, 0, 1441821, 11, 0 )
 
 [node name="Godray" type="ColorRect" parent="." index="7"]
@@ -282,9 +298,6 @@ anims/float = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ThanksForPlayingLabel" type="Label" parent="CanvasLayer/ColorRect" index="0"]
 self_modulate = Color( 1, 1, 1, 0 )

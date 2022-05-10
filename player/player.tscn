@@ -134,7 +134,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
-current_speed = 100.0
+current_speed = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 pause_mode = 2

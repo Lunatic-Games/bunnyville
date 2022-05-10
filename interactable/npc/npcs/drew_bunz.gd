@@ -12,4 +12,4 @@ func interact():
 	elif ProgressManager.has_progression("BLUEPRINTS_GIVEN_TO_DREW_BUNZ"):
 		display_dialogue(["Thank you for finding my blueprints!"])
 	else:
-		display_dialogue(["I can't seem to figure out where I misplaced my blueprints..."])
+		display_dialogue(["John and I are supposed to get started on this new house, but I can't seem to figure out where I misplaced my blueprints..."])

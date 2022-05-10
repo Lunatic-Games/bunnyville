@@ -18,7 +18,7 @@ func interact():
 	elif ProgressManager.has_progression("RABUNZEL_DOWN_FROM_TOWER"):
 		display_dialogue(["Thank you for your help getting me down!"])
 	else:
-		display_dialogue(["I don't have any way to get down! Can someone with great strength throw me some rope?"])
+		display_dialogue(["I don't have any way to get down! I need my knight in shining armor to rescue me!"])
 
 
 func update_state(_progression = null):

@@ -20,6 +20,6 @@ func interact():
 	elif has_flour:
 		display_dialogue(["Would you be able to bring the flour to Mrs. Bunnsworth?"])
 	else:
-		display_dialogue(["Hi, Dear. Would you be able to bring this to Mrs. Bunnsworth?"])
+		display_dialogue(["Morning, Dear! Would you be able to bring this to Mrs. Bunnsworth across the path?"])
 		display_item_received(["She gives you a bag of flour."], "FLOUR")
 		InventoryManager.add_item("FLOUR")

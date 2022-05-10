@@ -19,7 +19,7 @@ func interact():
 		display_dialogue(["Oh you found some rope!"])
 		display_action(["Sir Bunselot takes the rope."])
 		InventoryManager.remove_item("ROPE")
-		display_dialogue(["Now with just the right amount of spin..."])
+		display_dialogue(["Now with just the right angle..."])
 		display_action(["Sir Bunselot throws the rope up the tower."])
 		display_dialogue(["Taadaa! You can come on down now, Rabunzel!"])
 		ProgressManager.progression_achieved("RABUNZEL_DOWN_FROM_TOWER")
