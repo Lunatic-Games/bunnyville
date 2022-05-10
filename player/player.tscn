@@ -127,6 +127,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 100.0, 100.0, 50.0 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "jump_start", "jump", "jump_start", "idle" ]
+}
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 240, 135 )

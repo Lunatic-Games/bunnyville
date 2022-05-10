@@ -14,6 +14,6 @@ func interact():
 		InventoryManager.add_carrot()
 		ProgressManager.progression_achieved("CATTAILS_GIVEN_TO_BUNNATRIX")
 	elif ProgressManager.has_progression("CATTAILS_GIVEN_TO_BUNNATRIX"):
-		display_dialogue(["I can’t remember… Am I supposed to finely chop the cattails or add them to the cauldron whole…?", "This whole potion brewing thing is harder than it looks!"])
+		display_dialogue(["I can’t remember... Am I supposed to finely chop the cattails or add them to the cauldron whole...?", "This whole potion brewing thing is harder than it looks!"])
 	else:
 		display_dialogue(["Do you think you could find me some cattails? I need them for a potion I’m brewing. I'll need 5 in total..."])
